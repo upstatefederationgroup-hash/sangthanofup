@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>हमसे जुड़ें | लोक युवा संगठन उ.प्र.</title>
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand touch-animate" href="index.html">
+                <div class="logo-container">
+                    <img src="assets/img/logo.png" alt="लोक युवा संगठन लोगो">
+                </div>
+                <div class="brand-text">
+                    <h4 class="hindi-text">लोक युवा संगठन उ.प्र.</h4>
+                    <small>समुदायिक विकास के लिए युवा शक्ति</small>
+                </div>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link touch-animate" href="index.html">होम</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link touch-animate" href="about.html">हमारे बारे में</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link touch-animate" href="team.html">हमारी टीम</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle touch-animate" href="#" role="button" data-bs-toggle="dropdown">
+                            स्वयंसेवक
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="volunteer.html">स्वयंसेवक बनें</a></li>
+                            <li><a class="dropdown-item" href="volunteer.html#lucknow">लखनऊ</a></li>
+                            <li><a class="dropdown-item" href="volunteer.html#prayagraj">प्रयागराज</a></li>
+                            <li><a class="dropdown-item" href="volunteer.html#chitrakoot">चित्रकूट</a></li>
+                            <li><a class="dropdown-item" href="volunteer.html#shravasti">श्रावस्ती</a></li>
+                            <li><a class="dropdown-item" href="volunteer.html#aligarh">अलीगढ़</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle touch-animate" href="#" role="button" data-bs-toggle="dropdown">
+                            गैलरी
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="gallery-photos.html">फोटो गैलरी</a></li>
+                            <li><a class="dropdown-item" href="gallery-videos.html">वीडियो गैलरी</a></li>
+                            <li><a class="dropdown-item" href="gallery-media.html">मीडिया कवरेज</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link touch-animate" href="blog.html">ब्लॉग</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link touch-animate" href="contact.html">संपर्क करें</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active btn btn-primary text-white px-3 ms-2 touch-animate" href="join.html">जुड़ें</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Page Hero -->
+    <section class="join-hero">
+        <div class="container">
+            <div class="hero-content text-center">
+                <h1 class="hindi-text animate-fade-up">हमारे साथ जुड़ें</h1>
+                <p class="animate-fade-up">
+                    समुदायिक विकास और सामाजिक बदलाव के लिए हमारे साथ काम करें। एक स्वयंसेवक, साझेदार या समर्थक के रूप में 
+                    आप हमारे मिशन का हिस्सा बन सकते हैं और उत्तर प्रदेश के विकास में योगदान दे सकते हैं।
+                </p>
+                <div class="join-options animate-fade-up">
+                    <div class="join-option-card" data-target="volunteer-form">
+                        <div class="option-icon">🙋‍♂️</div>
+                        <h4>स्वयंसेवक बनें</h4>
+                        <p>हमारे कार्यक्रमों में सक्रिय भागीदारी</p>
+                    </div>
+                    <div class="join-option-card" data-target="partner-form">
+                        <div class="option-icon">🤝</div>
+                        <h4>साझेदार बनें</h4>
+                        <p>संस्थागत सहयोग और साझेदारी</p>
+                    </div>
+                    <div class="join-option-card" data-target="supporter-form">
+                        <div class="option-icon">💝</div>
+                        <h4>समर्थक बनें</h4>
+                        <p>वित्तीय सहायता और दान</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dynamic Form Section -->
+    <section class="join-form-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    
+                    <!-- Volunteer Form -->
+                    <div id="volunteer-form" class="join-form-wrapper active animate-fade-up">
+                        <div class="form-header">
+                            <div class="form-icon">🙋‍♂️</div>
+                            <h2 class="hindi-text">स्वयंसेवक पंजीकरण फॉर्म</h2>
+                            <p>नीचे दी गई जानकारी भरकर हमारे स्वयंसेवक कार्यक्रम में शामिल हों</p>
+                        </div>
+                        
+                        <form id="volunteerForm" class="join-form">
+                            <div class="form-progress">
+                                <div class="progress-bar">
+                                    <div class="progress-step active" data-step="1">
+                                        <div class="step-number">1</div>
+                                        <div class="step-label">व्यक्तिगत जानकारी</div>
+                                    </div>
+                                    <div class="progress-step" data-step="2">
+                                        <div class="step-number">2</div>
+                                        <div class="step-label">रुचि क्षेत्र</div>
+                                    </div>
+                                    <div class="progress-step" data-step="3">
+                                        <div class="step-number">3</div>
+                                        <div class="step-label">उपलब्धता</div>
+                                    </div>
+                                    <div class="progress-step" data-step="4">
+                                        <div class="step-number">4</div>
+                                        <div class="step-label">पुष्टिकरण</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Step 1: Personal Information -->
+                            <div class="form-step active" data-step="1">
+                                <h3 class="step-title hindi-text">व्यक्तिगत जानकारी</h3>
+                                <div class="row g-4">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="form-label">पूरा नाम <span class="required">*</span></label>
+                                            <input type="text" name="fullName" class="form-control" required>
+                                            <div class="form-icon">👤</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="form-label">ईमेल पता <span class="required">*</span></label>
+                                            <input type="email" name="email" class="form-control" required>
+                                            <div class="form-icon">📧</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="form-label">मोबाइल नंबर <span class="required">*</span></label>
+                                            <input type="tel" name="phone" class="form-control" required>
+                                            <div class="form-icon">📱</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="form-label">आयु <span class="required">*</span></label>
+                                            <input type="number" name="age" class="form-control" min="16" max="80" required>
+                                            <div class="form-icon">🎂</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="form-label">लिंग <span class="required">*</span></label>
+                                            <select name="gender" class="form-control" required>
+                                                <option value="">चुनें</option>
+                                                <option value="male">पुरुष</option>
+                                                <option value="female">महिला</option>
+                                                <option value="other">अन्य</option>
+                                            </select>
+                                            <div class="form-icon">⚥</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="form-label">शिक्षा <span class="required">*</span></label>
+                                            <select name="education" class="form-control" required>
+                                                <option value="">चुनें</option>
+                                                <option value="12th">12वीं पास</option>
+                                                <option value="graduate">स्नातक</option>
+                                                <option value="postgraduate">स्नातकोत्तर</option>
+                                                <option value="phd">पीएचडी</option>
+                                                <option value="other">अन्य</option>
+                                            </select>
+                                            <div class="form-icon">🎓</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <label class="form-label">पूरा पता <span class="required">*</span></label>
+                                            <textarea name="address" class="form-control" rows="3" required></textarea>
+                                            <div class="form-icon">📍</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="form-label">जिला <span class="required">*</span></label>
+                                            <select name="district" class="form-control" required>
+                                                <option value="">चुनें</option>
+                                                <option value="lucknow">लखनऊ</option>
+                                                <option value="prayagraj">प्रयागराज</option>
+                                                <option value="chitrakoot">चित्रकूट</option>
+                                                <option value="shravasti">श्रावस्ती</option>
+                                                <option value="aligarh">अलीगढ़</option>
+                                                <option value="other">अन्य</option>
+                                            </select>
+                                            <div class="form-icon">🏘️</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="form-label">व्यवसाय</label>
+                                            <input type="text" name="occupation" class="form-control">
+                                            <div class="form-icon">💼</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Step 2: Areas of Interest -->
+                            <div class="form-step" data-step="2">
+                                <h3 class="step-title hindi-text">रुचि के क्षेत्र</h3>
+                                <p class="step-description">आप किन क्षेत्रों में काम करना चाहते हैं? (एक से अधिक चुन सकते हैं)</p>
+                                
+                                <div class="interest-grid">
+                                    <div class="interest-card">
+                                        <input type="checkbox" id="education" name="interests[]" value="education">
+                                        <label for="education" class="interest-label">
+                                            <div class="interest-icon">📚</div>
+                                            <div class="interest-title">शिक्षा और साक्षरता</div>
+                                            <div class="interest-description">ग्रामीण शिक्षा, डिजिटल साक्षरता</div>
+                                        </label>
+                                    </div>
+                                    
+                                    <div class="interest-card">
+                                        <input type="checkbox" id="health" name="interests[]" value="health">
+                                        <label for="health" class="interest-label">
+                                            <div class="interest-icon">🏥</div>
+                                            <div class="interest-title">स्वास्थ्य सेवा</div>
+                                            <div class="interest-description">स्वास्थ्य शिविर, जागरूकता कार्यक्रम</div>
+                                        </label>
+                                    </div>
+                                    
+                                    <div class="interest-card">
+                                        <input type="checkbox" id="cleanliness" name="interests[]" value="cleanliness">
+                                        <label for="cleanliness" class="interest-label">
+                                            <div class="interest-icon">🧹</div>
+                                            <div class="interest-title">स्वच्छता अभियान</div>
+                                            <div class="interest-description">सफाई अभियान, कचरा प्रबंधन</div>
+                                        </label>
+                                    </div>
+                                    
+                                    <div class="interest-card">
+                                        <input type="checkbox" id="environment" name="interests[]" value="environment">
+                                        <label for="environment" class="interest-label">
+                                            <div class="interest-icon">🌱</div>
+                                            <div class="interest-title">पर्यावरण संरक्षण</div>
+                                            <div class="interest-description">वृक्षारोपण, जल संरक्षण</div>
+                                        </label>
+                                    </div>
+                                    
+                                    <div class="interest-card">
+                                        <input type="checkbox" id="women" name="interests[]" value="women">
+                                        <label for="women" class="interest-label">
+                                            <div class="interest-icon">👩‍💼</div>
+                                            <div class="interest-title">महिला सशक्तिकरण</div>
+                                            <div class="interest-description">स्व-सहायता समूह, कौशल विकास</div>
+                                        </label>
+                                    </div>
+                                    
+                                    <div class="interest-card">
+                                        <input type="checkbox" id="youth" name="interests[]" value="youth">
+                                        <label for="youth" class="interest-label">
+                                            <div class="interest-icon">🎯</div>
+                                            <div class="interest-title">युवा विकास</div>
+                                            <div class="interest-description">नेतृत्व प्रशिक्षण, रोजगार सहायता</div>
+                                        </label>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group mt-4">
+                                    <label class="form-label">विशेष कौशल या अनुभव</label>
+                                    <textarea name="skills" class="form-control" rows="3" placeholder="अपने विशेष कौशल, अनुभव या प्रतिभा के बारे में बताएं..."></textarea>
+                                </div>
+                            </div>
+
+                            <!-- Step 3: Availability -->
+                            <div class="form-step" data-step="3">
+                                <h3 class="step-title hindi-text">उपलब्धता</h3>
+                                <p class="step-description">आप कब और कितना समय दे सकते हैं?</p>
+                                
+                                <div class="row g-4">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="form-label">साप्ताहिक उपलब्धता <span class="required">*</span></label>
+                                            <select name="weeklyAvailability" class="form-control" required>
+                                                <option value="">चुनें</option>
+                                                <option value="2-4 hours">2-4 घंटे प्रति सप्ताह</option>
+                                                <option value="5-8 hours">5-8 घंटे प्रति सप्ताह</option>
+                                                <option value="9-15 hours">9-15 घंटे प्रति सप्ताह</option>
+                                                <option value="15+ hours">15+ घंटे प्रति सप्ताह</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="form-label">पसंदीदा समय <span class="required">*</span></label>
+                                            <select name="preferredTime" class="form-control" required>
+                                                <option value="">चुनें</option>
+                                                <option value="morning">सुबह (6:00-12:00)</option>
+                                                <option value="afternoon">दोपहर (12:00-18:00)</option>
+                                                <option value="evening">शाम (18:00-21:00)</option>
+                                                <option value="flexible">लचीला समय</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <label class="form-label">उपलब्ध दिन (एक से अधिक चुन सकते हैं)</label>
+                                            <div class="days-selection">
+                                                <label class="day-checkbox">
+                                                    <input type="checkbox" name="availableDays[]" value="monday">
+                                                    <span>सोमवार</span>
+                                                </label>
+                                                <label class="day-checkbox">
+                                                    <input type="checkbox" name="availableDays[]" value="tuesday">
+                                                    <span>मंगलवार</span>
+                                                </label>
+                                                <label class="day-checkbox">
+                                                    <input type="checkbox" name="availableDays[]" value="wednesday">
+                                                    <span>बुधवार</span>
+                                                </label>
+                                                <label class="day-checkbox">
+                                                    <input type="checkbox" name="availableDays[]" value="thursday">
+                                                    <span>गुरुवार</span>
+                                                </label>
+                                                <label class="day-checkbox">
+                                                    <input type="checkbox" name="availableDays[]" value="friday">
+                                                    <span>शुक्रवार</span>
+                                                </label>
+                                                <label class="day-checkbox">
+                                                    <input type="checkbox" name="availableDays[]" value="saturday">
+                                                    <span>शनिवार</span>
+                                                </label>
+                                                <label class="day-checkbox">
+                                                    <input type="checkbox" name="availableDays[]" value="sunday">
+                                                    <span>रविवार</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <label class="form-label">क्या आप यात्रा कर सकते हैं? <span class="required">*</span></label>
+                                            <div class="radio-group">
+                                                <label class="radio-option">
+                                                    <input type="radio" name="canTravel" value="yes" required>
+                                                    <span class="radio-custom"></span>
+                                                    <span class="radio-text">हां, मैं जिले के भीतर यात्रा कर सकता हूं</span>
+                                                </label>
+                                                <label class="radio-option">
+                                                    <input type="radio" name="canTravel" value="limited" required>
+                                                    <span class="radio-custom"></span>
+                                                    <span class="radio-text">सीमित यात्रा (केवल शहर के भीतर)</span>
+                                                </label>
+                                                <label class="radio-option">
+                                                    <input type="radio" name="canTravel" value="no" required>
+                                                    <span class="radio-custom"></span>
+                                                    <span class="radio-text">नहीं, मैं केवल स्थानीय कार्य कर सकता हूं</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Step 4: Confirmation -->
+                            <div class="form-step" data-step="4">
+                                <h3 class="step-title hindi-text">पुष्टिकरण और घोषणा</h3>
+                                <p class="step-description">कृपया निम्नलिखित शर्तों को पढ़ें और सहमति दें</p>
+                                
+                                <div class="confirmation-section">
+                                    <div class="confirmation-card">
+                                        <h4>महत्वपूर्ण जानकारी</h4>
+                                        <ul>
+                                            <li>स्वयंसेवकों को कोई वेतन नहीं मिलता है</li>
+                                            <li>सभी गतिविधियां स्वैच्छिक आधार पर होती हैं</li>
+                                            <li>आपको प्रशिक्षण और मार्गदर्शन प्रदान किया जाएगा</li>
+                                            <li>स्वयंसेवा प्रमाणपत्र और अनुभव पत्र दिया जाएगा</li>
+                                            <li>आप कभी भी स्वयंसेवा छोड़ सकते हैं</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label class="form-label">प्रेरणा <span class="required">*</span></label>
+                                        <textarea name="motivation" class="form-control" rows="4" placeholder="आप क्यों हमारे साथ स्वयंसेवक बनना चाहते हैं? अपनी प्रेरणा साझा करें..." required></textarea>
+                                    </div>
+                                    
+                                    <div class="checkbox-group">
+                                        <label class="checkbox-option">
+                                            <input type="checkbox" name="agree_terms" required>
+                                            <span class="checkbox-custom"></span>
+                                            <span class="checkbox-text">मैं उपरोक्त शर्तों से सहमत हूं और स्वेच्छा से स्वयंसेवक बनना चाहता हूं</span>
+                                        </label>
+                                        
+                                        <label class="checkbox-option">
+                                            <input type="checkbox" name="agree_privacy" required>
+                                            <span class="checkbox-custom"></span>
+                                            <span class="checkbox-text">मैं <a href="#" class="text-primary">गोपनीयता नीति</a> से सहमत हूं</span>
+                                        </label>
+                                        
+                                        <label class="checkbox-option">
+                                            <input type="checkbox" name="newsletter">
+                                            <span class="checkbox-custom"></span>
+                                            <span class="checkbox-text">मुझे ईमेल के माध्यम से अपडेट भेजें</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Form Navigation -->
+                            <div class="form-navigation">
+                                <button type="button" class="nav-btn prev-btn" onclick="previousStep()">
+                                    <span>← पिछला</span>
+                                </button>
+                                <button type="button" class="nav-btn next-btn" onclick="nextStep()">
+                                    <span>अगला →</span>
+                                </button>
+                                <button type="submit" class="nav-btn submit-btn" style="display: none;">
+                                    <span class="btn-text">आवेदन जमा करें</span>
+                                    <span class="btn-icon">📤</span>
+                                    <div class="btn-loading">
+                                        <div class="spinner"></div>
+                                        <span>जमा किया जा रहा है...</span>
+                                    </div>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Partner Form -->
+                    <div id="partner-form" class="join-form-wrapper animate-fade-up">
+                        <div class="form-header">
+                            <div class="form-icon">🤝</div>
+                            <h2 class="hindi-text">साझेदारी पंजीकरण फॉर्म</h2>
+                            <p>संस्थागत साझेदारी के लिए आवेदन करें</p>
+                        </div>
+                        
+                        <form id="partnerForm" class="join-form">
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-label">संस्था का नाम <span class="required">*</span></label>
+                                        <input type="text" name="organizationName" class="form-control" required>
+                                        <div class="form-icon">🏢</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-label">संस्था का प्रकार <span class="required">*</span></label>
+                                        <select name="organizationType" class="form-control" required>
+                                            <option value="">चुनें</option>
+                                            <option value="ngo">गैर-सरकारी संगठन (NGO)</option>
+                                            <option value="corporate">कॉर्पोरेट कंपनी</option>
+                                            <option value="government">सरकारी संस्थान</option>
+                                            <option value="educational">शैक्षणिक संस्थान</option>
+                                            <option value="trust">ट्रस्ट/फाउंडेशन</option>
+                                            <option value="other">अन्य</option>
+                                        </select>
+                                        <div class="form-icon">🏛️</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-label">संपर्क व्यक्ति का नाम <span class="required">*</span></label>
+                                        <input type="text" name="contactPerson" class="form-control" required>
+                                        <div class="form-icon">👤</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-label">पदनाम <span class="required">*</span></label>
+                                        <input type="text" name="designation" class="form-control" required>
+                                        <div class="form-icon">💼</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-label">ईमेल पता <span class="required">*</span></label>
+                                        <input type="email" name="email" class="form-control" required>
+                                        <div class="form-icon">📧</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-label">फोन नंबर <span class="required">*</span></label>
+                                        <input type="tel" name="phone" class="form-control" required>
+                                        <div class="form-icon">📱</div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label class="form-label">संस्था का पूरा पता <span class="required">*</span></label>
+                                        <textarea name="address" class="form-control" rows="3" required></textarea>
+                                        <div class="form-icon">📍</div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label class="form-label">साझेदारी का प्रकार <span class="required">*</span></label>
+                                        <div class="checkbox-group">
+                                            <label class="checkbox-option">
+                                                <input type="checkbox" name="partnershipType[]" value="funding">
+                                                <span class="checkbox-custom"></span>
+                                                <span class="checkbox-text">वित्तीय सहायता</span>
+                                            </label>
+                                            <label class="checkbox-option">
+                                                <input type="checkbox" name="partnershipType[]" value="resources">
+                                                <span class="checkbox-custom"></span>
+                                                <span class="checkbox-text">संसाधन साझाकरण</span>
+                                            </label>
+                                            <label class="checkbox-option">
+                                                <input type="checkbox" name="partnershipType[]" value="expertise">
+                                                <span class="checkbox-custom"></span>
+                                                <span class="checkbox-text">तकनीकी विशेषज्ञता</span>
+                                            </label>
+                                            <label class="checkbox-option">
+                                                <input type="checkbox" name="partnershipType[]" value="joint_programs">
+                                                <span class="checkbox-custom"></span>
+                                                <span class="checkbox-text">संयुक्त कार्यक्रम</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label class="form-label">प्रस्तावित साझेदारी का विवरण <span class="required">*</span></label>
+                                        <textarea name="partnershipDetails" class="form-control" rows="5" placeholder="कृपया विस्तार से बताएं कि आप कैसी साझेदारी चाहते हैं..." required></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="checkbox-group">
+                                        <label class="checkbox-option">
+                                            <input type="checkbox" name="agree_terms" required>
+                                            <span class="checkbox-custom"></span>
+                                            <span class="checkbox-text">मैं नियम और शर्तों से सहमत हूं</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="submit-btn">
+                                        <span class="btn-text">साझेदारी प्रस्ताव भेजें</span>
+                                        <span class="btn-icon">🤝</span>
+                                        <div class="btn-loading">
+                                            <div class="spinner"></div>
+                                            <span>भेजा जा रहा है...</span>
+                                        </div>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Supporter Form -->
+                    <div id="supporter-form" class="join-form-wrapper animate-fade-up">
+                        <div class="form-header">
+                            <div class="form-icon">💝</div>
+                            <h2 class="hindi-text">समर्थक पंजीकरण फॉर्म</h2>
+                            <p>हमारे कार्यों का समर्थन करने के लिए धन्यवाद</p>
+                        </div>
+                        
+                        <form id="supporterForm" class="join-form">
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-label">नाम <span class="required">*</span></label>
+                                        <input type="text" name="fullName" class="form-control" required>
+                                        <div class="form-icon">👤</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-label">ईमेल पता <span class="required">*</span></label>
+                                        <input type="email" name="email" class="form-control" required>
+                                        <div class="form-icon">📧</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-label">फोन नंबर <span class="required">*</span></label>
+                                        <input type="tel" name="phone" class="form-control" required>
+                                        <div class="form-icon">📱</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-label">व्यवसाय</label>
+                                        <input type="text" name="occupation" class="form-control">
+                                        <div class="form-icon">💼</div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label class="form-label">समर्थन का प्रकार <span class="required">*</span></label>
+                                        <div class="support-types">
+                                            <label class="support-type-card">
+                                                <input type="radio" name="supportType" value="one_time" required>
+                                                <div class="support-card-content">
+                                                    <div class="support-icon">💰</div>
+                                                    <h4>एकमुश्त दान</h4>
+                                                    <p>एक बार की वित्तीय सहायता</p>
+                                                </div>
+                                            </label>
+                                            <label class="support-type-card">
+                                                <input type="radio" name="supportType" value="monthly" required>
+                                                <div class="support-card-content">
+                                                    <div class="support-icon">📅</div>
+                                                    <h4>मासिक दान</h4>
+                                                    <p>नियमित मासिक योगदान</p>
+                                                </div>
+                                            </label>
+                                            <label class="support-type-card">
+                                                <input type="radio" name="supportType" value="project_based" required>
+                                                <div class="support-card-content">
+                                                    <div class="support-icon">🎯</div>
+                                                    <h4>परियोजना आधारित</h4>
+                                                    <p>विशिष्ट परियोजना के लिए</p>
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label class="form-label">दान की राशि (रुपए में)</label>
+                                        <input type="number" name="donationAmount" class="form-control" min="100">
+                                        <div class="form-icon">₹</div>
+                                        <small class="form-text">न्यूनतम दान राशि ₹100 है</small>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label class="form-label">विशेष संदेश</label>
+                                        <textarea name="message" class="form-control" rows="4" placeholder="आप हमें कोई विशेष संदेश देना चाहते हैं?"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="tax-info">
+                                        <h4>कर छूट की जानकारी</h4>
+                                        <p>आपका दान 80G के तहत कर छूट के लिए योग्य है। हम आपको दान की रसीद ईमेल करेंगे।</p>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="checkbox-group">
+                                        <label class="checkbox-option">
+                                            <input type="checkbox" name="agree_terms" required>
+                                            <span class="checkbox-custom"></span>
+                                            <span class="checkbox-text">मैं नियम और शर्तों से सहमत हूं</span>
+                                        </label>
+                                        <label class="checkbox-option">
+                                            <input type="checkbox" name="newsletter">
+                                            <span class="checkbox-custom"></span>
+                                            <span class="checkbox-text">मुझे नियमित अपडेट भेजें</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="submit-btn">
+                                        <span class="btn-text">समर्थक बनें</span>
+                                        <span class="btn-icon">💝</span>
+                                        <div class="btn-loading">
+                                            <div class="spinner"></div>
+                                            <span>प्रक्रिया जारी...</span>
+                                        </div>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Modal -->
+    <div class="modal fade" id="successModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <div class="success-animation">
+                        <div class="success-icon">✅</div>
+                        <div class="success-confetti">🎉</div>
+                    </div>
+                    <h4 class="success-title hindi-text">स्वागत है! आवेदन सफल!</h4>
+                    <p class="success-message">
+                        बधाई हो! आपका आवेदन सफलतापूर्वक जमा हो गया है। 
+                        हमारी टीम 2-3 दिनों में आपसे संपर्क करेगी।
+                    </p>
+                    <div class="next-steps">
+                        <h5>अगले चरण:</h5>
+                        <ul>
+                            <li>हम आपके आवेदन की समीक्षा करेंगे</li>
+                            <li>फोन/ईमेल से प्रारंभिक बातचीत</li>
+                            <li>ओरिएंटेशन सेशन का निमंत्रण</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="modal-footer border-0 justify-content-center">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">धन्यवाद!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- News Ticker -->
+    <div class="news-ticker">
+        <div class="ticker-content">
+            <span class="ticker-title">सदस्यता अपडेट:</span>
+            <span class="ticker-text">
+                इस महीने 50 नए स्वयंसेवक जुड़े • 5 नई कॉर्पोरेट साझेदारियां • 
+                100+ नए समर्थक जुड़े • ऑनलाइन ज्वाइनिंग प्रक्रिया तेज हुई • 
+                डिजिटल प्रमाणपत्र सिस्टम शुरू • व्हाट्सऐप ग्रुप इनविटेशन तुरंत मिलेगा
+            </span>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-brand">
+                        <img src="assets/img/logo.png" alt="लोक युवा संगठन" class="footer-logo">
+                        <h5 class="hindi-text">लोक युवा संगठन उ.प्र.</h5>
+                        <p class="footer-description">
+                            उत्तर प्रदेश में युवा शक्ति के माध्यम से समुदायिक विकास और सामाजिक बदलाव 
+                            लाने के लिए प्रतिबद्ध संगठन।
+                        </p>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link touch-animate">📘</a>
+                        <a href="#" class="social-link touch-animate">🐦</a>
+                        <a href="#" class="social-link touch-animate">📷</a>
+                        <a href="#" class="social-link touch-animate">💼</a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="footer-title">महत्वपूर्ण लिंक</h6>
+                    <ul class="footer-links">
+                        <li><a href="about.html" class="touch-animate">हमारे बारे में</a></li>
+                        <li><a href="team.html" class="touch-animate">हमारी टीम</a></li>
+                        <li><a href="volunteer.html" class="touch-animate">स्वयंसेवक बनें</a></li>
+                        <li><a href="blog.html" class="touch-animate">ब्लॉग</a></li>
+                        <li><a href="contact.html" class="touch-animate">संपर्क करें</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="footer-title">हमारे काम</h6>
+                    <ul class="footer-links">
+                        <li><a href="gallery-photos.html" class="touch-animate">फोटो गैलरी</a></li>
+                        <li><a href="gallery-videos.html" class="touch-animate">वीडियो गैलरी</a></li>
+                        <li><a href="gallery-media.html" class="touch-animate">मीडिया कवरेज</a></li>
+                        <li><a href="#" class="touch-animate">वार्षिक रिपोर्ट</a></li>
+                        <li><a href="#" class="touch-animate">उपलब्धियां</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-logo-section">
+                        <img src="assets/img/footer-logo.png" alt="संगठन लोगो" class="large-footer-logo touch-animate">
+                        <h4 class="footer-slogan hindi-text">
+                            "मजबूत युवा, मजबूत समुदाय"
+                        </h4>
+                        <p class="footer-tagline">
+                            सामूहिक कार्य और सतत विकास के माध्यम से कल का निर्माण
+                        </p>
+                        <div class="newsletter-signup">
+                            <input type="email" class="form-control" placeholder="ईमेल पता दर्ज करें">
+                            <button class="btn btn-primary">सब्स्क्राइब करें</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <hr class="footer-divider">
+            
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="footer-copyright">
+                        © 2025 लोक युवा संगठन उत्तर प्रदेश। सभी अधिकार सुरक्षित।
+                    </p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="footer-links-inline">
+                        <a href="#" class="touch-animate">गोपनीयता नीति</a>
+                        <a href="#" class="touch-animate">उपयोग की शर्तें</a>
+                        <a href="#" class="touch-animate">कुकी नीति</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        let currentStep = 1;
+
+        // Form switching functionality
+        document.querySelectorAll('.join-option-card').forEach(card => {
+            card.addEventListener('click', function() {
+                const targetForm = this.getAttribute('data-target');
+                
+                // Hide all forms
+                document.querySelectorAll('.join-form-wrapper').forEach(form => {
+                    form.classList.remove('active');
+                });
+                
+                // Show selected form
+                document.getElementById(targetForm).classList.add('active');
+                
+                // Update active card
+                document.querySelectorAll('.join-option-card').forEach(c => {
+                    c.classList.remove('active');
+                });
+                this.classList.add('active');
+            });
+        });
+
+        // Multi-step form functionality
+        function nextStep() {
+            const currentFormStep = document.querySelector(`[data-step="${currentStep}"]`);
+            const inputs = currentFormStep.querySelectorAll('input[required], select[required], textarea[required]');
+            let isValid = true;
+
+            inputs.forEach(input => {
+                if (input.type === 'checkbox') {
+                    const checkboxGroup = currentFormStep.querySelectorAll(`input[name="${input.name}"]`);
+                    const isChecked = Array.from(checkboxGroup).some(cb => cb.checked);
+                    if (input.hasAttribute('required') && !isChecked) {
+                        isValid = false;
+                        input.classList.add('is-invalid');
+                    } else {
+                        input.classList.remove('is-invalid');
+                        input.classList.add('is-valid');
+                    }
+                } else {
+                    if (!input.checkValidity()) {
+                        isValid = false;
+                        input.classList.add('is-invalid');
+                    } else {
+                        input.classList.remove('is-invalid');
+                        input.classList.add('is-valid');
+                    }
+                }
+            });
+
+            if (isValid && currentStep < 4) {
+                // Hide current step
+                document.querySelector(`.form-step[data-step="${currentStep}"]`).classList.remove('active');
+                document.querySelector(`.progress-step[data-step="${currentStep}"]`).classList.remove('active');
+                
+                currentStep++;
+                
+                // Show next step
+                document.querySelector(`.form-step[data-step="${currentStep}"]`).classList.add('active');
+                document.querySelector(`.progress-step[data-step="${currentStep}"]`).classList.add('active');
+                
+                updateNavigation();
+            }
+        }
+
+        function previousStep() {
+            if (currentStep > 1) {
+                // Hide current step
+                document.querySelector(`.form-step[data-step="${currentStep}"]`).classList.remove('active');
+                document.querySelector(`.progress-step[data-step="${currentStep}"]`).classList.remove('active');
+                
+                currentStep--;
+                
+                // Show previous step
+                document.querySelector(`.form-step[data-step="${currentStep}"]`).classList.add('active');
+                document.querySelector(`.progress-step[data-step="${currentStep}"]`).classList.add('active');
+                
+                updateNavigation();
+            }
+        }
+
+        function updateNavigation() {
+            const prevBtn = document.querySelector('.prev-btn');
+            const nextBtn = document.querySelector('.next-btn');
+            const submitBtn = document.querySelector('.submit-btn');
+            
+            if (currentStep === 1) {
+                prevBtn.style.display = 'none';
+            } else {
+                prevBtn.style.display = 'block';
+            }
+            
+            if (currentStep === 4) {
+                nextBtn.style.display = 'none';
+                submitBtn.style.display = 'block';
+            } else {
+                nextBtn.style.display = 'block';
+                submitBtn.style.display = 'none';
+            }
+        }
+
+        // Form submission handling
+        document.querySelectorAll('.join-form').forEach(form => {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const submitBtn = this.querySelector('.submit-btn');
+                const btnText = submitBtn.querySelector('.btn-text');
+                const btnIcon = submitBtn.querySelector('.btn-icon');
+                const btnLoading = submitBtn.querySelector('.btn-loading');
+                
+                // Show loading state
+                btnText.style.display = 'none';
+                btnIcon.style.display = 'none';
+                btnLoading.style.display = 'flex';
+                submitBtn.disabled = true;
+                
+                // Simulate form submission
+                setTimeout(() => {
+                    // Reset button state
+                    btnText.style.display = 'inline';
+                    btnIcon.style.display = 'inline';
+                    btnLoading.style.display = 'none';
+                    submitBtn.disabled = false;
+                    
+                    // Show success modal
+                    const successModal = new bootstrap.Modal(document.getElementById('successModal'));
+                    successModal.show();
+                    
+                    // Reset form
+                    this.reset();
+                    currentStep = 1;
+                    updateNavigation();
+                    
+                    // Reset form steps
+                    document.querySelectorAll('.form-step').forEach(step => {
+                        step.classList.remove('active');
+                    });
+                    document.querySelectorAll('.progress-step').forEach(step => {
+                        step.classList.remove('active');
+                    });
+                    document.querySelector('.form-step[data-step="1"]').classList.add('active');
+                    document.querySelector('.progress-step[data-step="1"]').classList.add('active');
+                }, 3000);
+            });
+        });
+
+        // Form validation styling
+        document.querySelectorAll('.form-control').forEach(input => {
+            input.addEventListener('blur', function() {
+                if (this.checkValidity()) {
+                    this.classList.add('is-valid');
+                    this.classList.remove('is-invalid');
+                } else {
+                    this.classList.add('is-invalid');
+                    this.classList.remove('is-valid');
+                }
+            });
+            
+            input.addEventListener('input', function() {
+                this.classList.remove('is-invalid', 'is-valid');
+            });
+        });
+
+        // Initialize navigation
+        updateNavigation();
+
+        // Animate on scroll
+        function animateOnScroll() {
+            const elements = document.querySelectorAll('.animate-fade-up');
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.classList.add('animated');
+                }
+            });
+        }
+        
+        window.addEventListener('scroll', animateOnScroll);
+        window.addEventListener('load', animateOnScroll);
+        
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>

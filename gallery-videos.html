@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>वीडियो गैलरी | लोक युवा संगठन उ.प्र.</title>
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand touch-animate" href="index.html">
+                <div class="logo-container">
+                    <img src="assets/img/logo.png" alt="लोक युवा संगठन लोगो">
+                </div>
+                <div class="brand-text">
+                    <h4 class="hindi-text">लोक युवा संगठन उ.प्र.</h4>
+                    <small>समुदायिक विकास के लिए युवा शक्ति</small>
+                </div>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link touch-animate" href="index.html">होम</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link touch-animate" href="about.html">हमारे बारे में</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link touch-animate" href="team.html">हमारी टीम</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle touch-animate" href="#" role="button" data-bs-toggle="dropdown">
+                            स्वयंसेवक
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="volunteer.html">स्वयंसेवक बनें</a></li>
+                            <li><a class="dropdown-item" href="volunteer.html#lucknow">लखनऊ</a></li>
+                            <li><a class="dropdown-item" href="volunteer.html#prayagraj">प्रयागराज</a></li>
+                            <li><a class="dropdown-item" href="volunteer.html#chitrakoot">चित्रकूट</a></li>
+                            <li><a class="dropdown-item" href="volunteer.html#shravasti">श्रावस्ती</a></li>
+                            <li><a class="dropdown-item" href="volunteer.html#aligarh">अलीगढ़</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link active dropdown-toggle touch-animate" href="#" role="button" data-bs-toggle="dropdown">
+                            गैलरी
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="gallery-photos.html">फोटो गैलरी</a></li>
+                            <li><a class="dropdown-item active" href="gallery-videos.html">वीडियो गैलरी</a></li>
+                            <li><a class="dropdown-item" href="gallery-media.html">मीडिया कवरेज</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link touch-animate" href="blog.html">ब्लॉग</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link touch-animate" href="contact.html">संपर्क करें</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-primary text-white px-3 ms-2 touch-animate" href="join.html">जुड़ें</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Page Hero -->
+    <section class="video-gallery-hero">
+        <div class="container">
+            <div class="hero-content text-center">
+                <h1 class="hindi-text animate-fade-up">वीडियो गैलरी</h1>
+                <p class="animate-fade-up">
+                    हमारे सामुदायिक कार्यक्रमों, डॉक्यूमेंट्री फिल्मों और कार्यशालाओं के वीडियो देखें। 
+                    ये वीडियो हमारे काम की सच्ची तस्वीर पेश करते हैं और समुदाय में हो रहे बदलाव को दिखाते हैं।
+                </p>
+                <div class="video-stats animate-fade-up">
+                    <div class="video-stat-item">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">वीडियो</span>
+                    </div>
+                    <div class="video-stat-item">
+                        <span class="stat-number">25+</span>
+                        <span class="stat-label">डॉक्यूमेंट्री</span>
+                    </div>
+                    <div class="video-stat-item">
+                        <span class="stat-number">100K+</span>
+                        <span class="stat-label">व्यूज</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Video Section -->
+    <section class="featured-video-section">
+        <div class="container">
+            <div class="text-center mb-5 animate-fade-up">
+                <h2 class="hindi-text" style="font-size: 2.8rem; font-weight: 800; color: #667eea;">
+                    मुख्य वीडियो
+                </h2>
+                <p class="lead">हमारी नवीनतम डॉक्यूमेंट्री और महत्वपूर्ण कार्यक्रम</p>
+            </div>
+            
+            <div class="featured-video-container animate-fade-up">
+                <div class="featured-video-wrapper">
+                    <div class="video-thumbnail" onclick="playFeaturedVideo()">
+                        <img src="assets/img/videos/featured-video-thumb.jpg" alt="मुख्य वीडियो">
+                        <div class="video-watermark">लोक युवा संगठन उ.प्र.</div>
+                        <div class="play-overlay">
+                            <div class="play-button">
+                                <div class="play-icon">▶️</div>
+                            </div>
+                        </div>
+                        <div class="video-duration">15:42</div>
+                    </div>
+                    <div class="featured-video-info">
+                        <div class="video-category">डॉक्यूमेंट्री</div>
+                        <h3 class="video-title hindi-text">उत्तर प्रदेश में सामुदायिक बदलाव की कहानी</h3>
+                        <p class="video-description">
+                            यह डॉक्यूमेंट्री दिखाती है कि कैसे हमारे स्वयंसेवकों ने पिछले दो वर्षों में 5 जिलों में 
+                            शिक्षा, स्वास्थ्य और स्वच्छता के क्षेत्र में महत्वपूर्ण बदलाव लाया है। ग्रामीण समुदाय 
+                            के साथ हमारी यात्रा और उनकी सफलता की कहानियां।
+                        </p>
+                        <div class="video-meta">
+                            <div class="meta-item">
+                                <span class="meta-icon">📅</span>
+                                <span class="meta-text">10 सितंबर 2025</span>
+                            </div>
+                            <div class="meta-item">
+                                <span class="meta-icon">👁️</span>
+                                <span class="meta-text">15,234 व्यूज</span>
+                            </div>
+                            <div class="meta-item">
+                                <span class="meta-icon">🎬</span>
+                                <span class="meta-text">संदीप त्रिपाठी</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Categories -->
+    <section class="video-categories-section">
+        <div class="container">
+            <div class="text-center mb-5 animate-fade-up">
+                <h2 class="hindi-text" style="font-size: 2.5rem; font-weight: 800; color: #667eea;">
+                    वीडियो श्रेणियां
+                </h2>
+                <p class="lead">विभिन्न प्रकार के वीडियो और डॉक्यूमेंट्री</p>
+            </div>
+            
+            <div class="video-category-filters animate-fade-up">
+                <button class="category-filter-btn active" data-filter="all">सभी वीडियो</button>
+                <button class="category-filter-btn" data-filter="documentary">डॉक्यूमेंट्री</button>
+                <button class="category-filter-btn" data-filter="program">कार्यक्रम</button>
+                <button class="category-filter-btn" data-filter="training">प्रशिक्षण</button>
+                <button class="category-filter-btn" data-filter="testimonial">प्रशंसापत्र</button>
+                <button class="category-filter-btn" data-filter="awareness">जागरूकता</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Gallery Grid -->
+    <section class="video-gallery-section">
+        <div class="container">
+            <div class="video-gallery-grid" id="video-gallery">
+                
+                <!-- Documentary Videos -->
+                <div class="video-card animate-on-scroll" data-category="documentary">
+                    <div class="video-card-wrapper">
+                        <div class="video-thumbnail" onclick="playVideo('video1')">
+                            <img src="assets/img/videos/doc-1.jpg" alt="ग्रामीण शिक्षा डॉक्यूमेंट्री">
+                            <div class="video-watermark">लोक युवा संगठन उ.प्र.</div>
+                            <div class="play-overlay">
+                                <div class="play-button-small">
+                                    <div class="play-icon-small">▶️</div>
+                                </div>
+                            </div>
+                            <div class="video-duration">12:35</div>
+                            <div class="video-quality">HD</div>
+                        </div>
+                        <div class="video-info">
+                            <div class="video-category-badge">डॉक्यूमेंट्री</div>
+                            <h4 class="video-card-title hindi-text">ग्रामीण शिक्षा में क्रांति</h4>
+                            <p class="video-card-description">
+                                प्रयागराज के दूरदराज गांवों में डिजिटल शिक्षा कैसे पहुंच रही है
+                            </p>
+                            <div class="video-card-meta">
+                                <span class="views">8,456 व्यूज</span>
+                                <span class="date">5 सितंबर 2025</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="video-card animate-on-scroll" data-category="program">
+                    <div class="video-card-wrapper">
+                        <div class="video-thumbnail" onclick="playVideo('video2')">
+                            <img src="assets/img/videos/program-1.jpg" alt="स्वच्छता अभियान कार्यक्रम">
+                            <div class="video-watermark">लोक युवा संगठन उ.प्र.</div>
+                            <div class="play-overlay">
+                                <div class="play-button-small">
+                                    <div class="play-icon-small">▶️</div>
+                                </div>
+                            </div>
+                            <div class="video-duration">8:22</div>
+                            <div class="video-quality">HD</div>
+                        </div>
+                        <div class="video-info">
+                            <div class="video-category-badge program">कार्यक्रम</div>
+                            <h4 class="video-card-title hindi-text">लखनऊ स्वच्छता मेगा ड्राइव</h4>
+                            <p class="video-card-description">
+                                50+ स्वयंसेवकों के साथ शहरव्यापी स्वच्छता अभियान का लाइव कवरेज
+                            </p>
+                            <div class="video-card-meta">
+                                <span class="views">12,890 व्यूज</span>
+                                <span class="date">15 सितंबर 2025</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="video-card animate-on-scroll" data-category="training">
+                    <div class="video-card-wrapper">
+                        <div class="video-thumbnail" onclick="playVideo('video3')">
+                            <img src="assets/img/videos/training-1.jpg" alt="युवा नेतृत्व प्रशिक्षण">
+                            <div class="video-watermark">लोक युवा संगठन उ.प्र.</div>
+                            <div class="play-overlay">
+                                <div class="play-button-small">
+                                    <div class="play-icon-small">▶️</div>
+                                </div>
+                            </div>
+                            <div class="video-duration">25:15</div>
+                            <div class="video-quality">HD</div>
+                        </div>
+                        <div class="video-info">
+                            <div class="video-category-badge training">प्रशिक्षण</div>
+                            <h4 class="video-card-title hindi-text">युवा नेतृत्व विकास कार्यशाला</h4>
+                            <p class="video-card-description">
+                                श्रावस्ती में आयोजित 3-दिवसीय युवा नेतृत्व प्रशिक्षण का संपूर्ण कवरेज
+                            </p>
+                            <div class="video-card-meta">
+                                <span class="views">6,234 व्यूज</span>
+                                <span class="date">28 अगस्त 2025</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="video-card animate-on-scroll" data-category="testimonial">
+                    <div class="video-card-wrapper">
+                        <div class="video-thumbnail" onclick="playVideo('video4')">
+                            <img src="assets/img/videos/testimonial-1.jpg" alt="समुदाय के लोगों के अनुभव">
+                            <div class="video-watermark">लोक युवा संगठन उ.प्र.</div>
+                            <div class="play-overlay">
+                                <div class="play-button-small">
+                                    <div class="play-icon-small">▶️</div>
+                                </div>
+                            </div>
+                            <div class="video-duration">6:48</div>
+                            <div class="video-quality">HD</div>
+                        </div>
+                        <div class="video-info">
+                            <div class="video-category-badge testimonial">प्रशंसापत्र</div>
+                            <h4 class="video-card-title hindi-text">समुदाय की आवाज़</h4>
+                            <p class="video-card-description">
+                                चित्रकूट के ग्रामीणों द्वारा हमारे कार्यों की सराहना और अनुभव साझाकरण
+                            </p>
+                            <div class="video-card-meta">
+                                <span class="views">4,567 व्यूज</span>
+                                <span class="date">20 अगस्त 2025</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="video-card animate-on-scroll" data-category="awareness">
+                    <div class="video-card-wrapper">
+                        <div class="video-thumbnail" onclick="playVideo('video5')">
+                            <img src="assets/img/videos/awareness-1.jpg" alt="स्वास्थ्य जागरूकता अभियान">
+                            <div class="video-watermark">लोक युवा संगठन उ.प्र.</div>
+                            <div class="play-overlay">
+                                <div class="play-button-small">
+                                    <div class="play-icon-small">▶️</div>
+                                </div>
+                            </div>
+                            <div class="video-duration">10:30</div>
+                            <div class="video-quality">HD</div>
+                        </div>
+                        <div class="video-info">
+                            <div class="video-category-badge awareness">जागरूकता</div>
+                            <h4 class="video-card-title hindi-text">स्वास्थ्य जागरूकता रैली</h4>
+                            <p class="video-card-description">
+                                अलीगढ़ में कोविड बचाव और स्वास्थ्य जागरूकता के लिए व्यापक अभियान
+                            </p>
+                            <div class="video-card-meta">
+                                <span class="views">9,123 व्यूज</span>
+                                <span class="date">15 अगस्त 2025</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="video-card animate-on-scroll" data-category="documentary">
+                    <div class="video-card-wrapper">
+                        <div class="video-thumbnail" onclick="playVideo('video6')">
+                            <img src="assets/img/videos/doc-2.jpg" alt="महिला सशक्तिकरण डॉक्यूमेंट्री">
+                            <div class="video-watermark">लोक युवा संगठन उ.प्र.</div>
+                            <div class="play-overlay">
+                                <div class="play-button-small">
+                                    <div class="play-icon-small">▶️</div>
+                                </div>
+                            </div>
+                            <div class="video-duration">18:45</div>
+                            <div class="video-quality">HD</div>
+                        </div>
+                        <div class="video-info">
+                            <div class="video-category-badge">डॉक्यूमेंट्री</div>
+                            <h4 class="video-card-title hindi-text">महिला सशक्तिकरण की राह</h4>
+                            <p class="video-card-description">
+                                प्रयागराज की महिला स्वयं सहायता समूहों की सफलता की प्रेरणादायक कहानी
+                            </p>
+                            <div class="video-card-meta">
+                                <span class="views">11,456 व्यूज</span>
+                                <span class="date">10 अगस्त 2025</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="video-card animate-on-scroll" data-category="program">
+                    <div class="video-card-wrapper">
+                        <div class="video-thumbnail" onclick="playVideo('video7')">
+                            <img src="assets/img/videos/program-2.jpg" alt="जल संरक्षण कार्यक्रम">
+                            <div class="video-watermark">लोक युवा संगठन उ.प्र.</div>
+                            <div class="play-overlay">
+                                <div class="play-button-small">
+                                    <div class="play-icon-small">▶️</div>
+                                </div>
+                            </div>
+                            <div class="video-duration">14:20</div>
+                            <div class="video-quality">HD</div>
+                        </div>
+                        <div class="video-info">
+                            <div class="video-category-badge program">कार्यक्रम</div>
+                            <h4 class="video-card-title hindi-text">चित्रकूट जल संरक्षण मिशन</h4>
+                            <p class="video-card-description">
+                                भूजल पुनर्भरण और वर्षा जल संचयन परियोजना का विस्तृत कवरेज
+                            </p>
+                            <div class="video-card-meta">
+                                <span class="views">7,890 व्यूज</span>
+                                <span class="date">5 अगस्त 2025</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="video-card animate-on-scroll" data-category="training">
+                    <div class="video-card-wrapper">
+                        <div class="video-thumbnail" onclick="playVideo('video8')">
+                            <img src="assets/img/videos/training-2.jpg" alt="डिजिटल साक्षरता प्रशिक्षण">
+                            <div class="video-watermark">लोक युवा संगठन उ.प्र.</div>
+                            <div class="play-overlay">
+                                <div class="play-button-small">
+                                    <div class="play-icon-small">▶️</div>
+                                </div>
+                            </div>
+                            <div class="video-duration">22:10</div>
+                            <div class="video-quality">HD</div>
+                        </div>
+                        <div class="video-info">
+                            <div class="video-category-badge training">प्रशिक्षण</div>
+                            <h4 class="video-card-title hindi-text">डिजिटल साक्षरता बूट कैंप</h4>
+                            <p class="video-card-description">
+                                अलीगढ़ में ग्रामीण युवाओं के लिए व्यापक डिजिटल साक्षरता कार्यक्रम
+                            </p>
+                            <div class="video-card-meta">
+                                <span class="views">5,234 व्यूज</span>
+                                <span class="date">25 जुलाई 2025</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Load More Button -->
+            <div class="text-center mt-5 animate-fade-up">
+                <button class="load-more-videos-btn" onclick="loadMoreVideos()">
+                    <span>अधिक वीडियो लोड करें</span>
+                    <div class="load-icon">🎬</div>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Statistics -->
+    <section class="video-stats-section">
+        <div class="container">
+            <div class="text-center mb-5 animate-fade-up">
+                <h2 class="hindi-text" style="font-size: 2.5rem; font-weight: 800; color: #667eea;">
+                    वीडियो आंकड़े
+                </h2>
+                <p class="lead">हमारे वीडियो कंटेंट का प्रभाव</p>
+            </div>
+            
+            <div class="stats-grid animate-fade-up">
+                <div class="stat-card">
+                    <div class="stat-icon">🎥</div>
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">कुल वीडियो</div>
+                    <div class="stat-description">विभिन्न विषयों पर गुणवत्तापूर्ण वीडियो कंटेंट</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">👁️</div>
+                    <div class="stat-number">100K+</div>
+                    <div class="stat-label">कुल व्यूज</div>
+                    <div class="stat-description">सभी प्लेटफॉर्म पर मिलाकर कुल दर्शक संख्या</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">📱</div>
+                    <div class="stat-number">15+</div>
+                    <div class="stat-label">प्लेटफॉर्म</div>
+                    <div class="stat-description">YouTube, Facebook, Instagram पर उपलब्धता</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">🏆</div>
+                    <div class="stat-number">5+</div>
+                    <div class="stat-label">पुरस्कार</div>
+                    <div class="stat-description">सामाजिक प्रभाव के लिए मिले राष्ट्रीय पुरस्कार</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Player Modal -->
+    <div class="video-modal-overlay" id="videoModal" onclick="closeVideoModal()">
+        <div class="video-modal-content" onclick="event.stopPropagation()">
+            <button class="video-modal-close" onclick="closeVideoModal()">×</button>
+            <div class="video-player-wrapper">
+                <video id="videoPlayer" controls>
+                    <source src="" type="video/mp4">
+                    आपका ब्राउज़र वीडियो प्लेबैक को सपोर्ट नहीं करता।
+                </video>
+            </div>
+            <div class="video-modal-info">
+                <h3 id="modalVideoTitle" class="hindi-text"></h3>
+                <p id="modalVideoDescription"></p>
+                <div class="modal-video-actions">
+                    <button class="modal-action-btn" onclick="shareVideo()">
+                        <span>📤</span> शेयर करें
+                    </button>
+                    <button class="modal-action-btn" onclick="downloadVideo()">
+                        <span>⬇️</span> डाउनलोड करें
+                    </button>
+                    <button class="modal-action-btn" onclick="likeVideo()">
+                        <span>👍</span> पसंद करें
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- News Ticker -->
+    <div class="news-ticker">
+        <div class="ticker-content">
+            <span class="ticker-title">वीडियो अपडेट:</span>
+            <span class="ticker-text">
+                नई डॉक्यूमेंट्री "सामुदायिक बदलाव की कहानी" रिलीज़ • YouTube चैनल पर 10K सब्स्क्राइबर्स • 
+                महिला सशक्तिकरण वीडियो वायरल • लाइव स्ट्रीमिंग शुरू • 4K क्वालिटी वीडियो अपलोड • 
+                इंटरैक्टिव वीडियो फीचर जल्द आ रहा है
+            </span>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-brand">
+                        <img src="assets/img/logo.png" alt="लोक युवा संगठन" class="footer-logo">
+                        <h5 class="hindi-text">लोक युवा संगठन उ.प्र.</h5>
+                        <p class="footer-description">
+                            उत्तर प्रदेश में युवा शक्ति के माध्यम से समुदायिक विकास और सामाजिक बदलाव 
+                            लाने के लिए प्रतिबद्ध संगठन।
+                        </p>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link touch-animate">📘</a>
+                        <a href="#" class="social-link touch-animate">🐦</a>
+                        <a href="#" class="social-link touch-animate">📷</a>
+                        <a href="#" class="social-link touch-animate">💼</a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="footer-title">महत्वपूर्ण लिंक</h6>
+                    <ul class="footer-links">
+                        <li><a href="about.html" class="touch-animate">हमारे बारे में</a></li>
+                        <li><a href="team.html" class="touch-animate">हमारी टीम</a></li>
+                        <li><a href="volunteer.html" class="touch-animate">स्वयंसेवक बनें</a></li>
+                        <li><a href="blog.html" class="touch-animate">ब्लॉग</a></li>
+                        <li><a href="contact.html" class="touch-animate">संपर्क करें</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="footer-title">हमारे काम</h6>
+                    <ul class="footer-links">
+                        <li><a href="gallery-photos.html" class="touch-animate">फोटो गैलरी</a></li>
+                        <li><a href="gallery-videos.html" class="touch-animate">वीडियो गैलरी</a></li>
+                        <li><a href="gallery-media.html" class="touch-animate">मीडिया कवरेज</a></li>
+                        <li><a href="#" class="touch-animate">वार्षिक रिपोर्ट</a></li>
+                        <li><a href="#" class="touch-animate">उपलब्धियां</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-logo-section">
+                        <img src="assets/img/footer-logo.png" alt="संगठन लोगो" class="large-footer-logo touch-animate">
+                        <h4 class="footer-slogan hindi-text">
+                            "मजबूत युवा, मजबूत समुदाय"
+                        </h4>
+                        <p class="footer-tagline">
+                            सामूहिक कार्य और सतत विकास के माध्यम से कल का निर्माण
+                        </p>
+                        <div class="newsletter-signup">
+                            <input type="email" class="form-control" placeholder="ईमेल पता दर्ज करें">
+                            <button class="btn btn-primary">सब्स्क्राइब करें</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <hr class="footer-divider">
+            
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="footer-copyright">
+                        © 2025 लोक युवा संगठन उत्तर प्रदेश। सभी अधिकार सुरक्षित।
+                    </p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="footer-links-inline">
+                        <a href="#" class="touch-animate">गोपनीयता नीति</a>
+                        <a href="#" class="touch-animate">उपयोग की शर्तें</a>
+                        <a href="#" class="touch-animate">कुकी नीति</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Video data (in real implementation, this would come from a database)
+        const videoData = {
+            'featured': {
+                title: 'उत्तर प्रदेश में सामुदायिक बदलाव की कहानी',
+                description: 'यह डॉक्यूमेंट्री दिखाती है कि कैसे हमारे स्वयंसेवकों ने पिछले दो वर्षों में 5 जिलों में शिक्षा, स्वास्थ्य और स्वच्छता के क्षेत्र में महत्वपूर्ण बदलाव लाया है।',
+                url: 'assets/videos/featured-documentary.mp4'
+            },
+            'video1': {
+                title: 'ग्रामीण शिक्षा में क्रांति',
+                description: 'प्रयागराज के दूरदराज गांवों में डिजिटल शिक्षा कैसे पहुंच रही है।',
+                url: 'assets/videos/rural-education.mp4'
+            },
+            'video2': {
+                title: 'लखनऊ स्वच्छता मेगा ड्राइव',
+                description: '50+ स्वयंसेवकों के साथ शहरव्यापी स्वच्छता अभियान का लाइव कवरेज।',
+                url: 'assets/videos/cleanliness-drive.mp4'
+            }
+            // Add more video data as needed
+        };
+
+        // Video filter functionality
+        document.querySelectorAll('.category-filter-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                // Remove active class from all buttons
+                document.querySelectorAll('.category-filter-btn').forEach(b => b.classList.remove('active'));
+                // Add active class to clicked button
+                this.classList.add('active');
+                
+                const filter = this.getAttribute('data-filter');
+                const videos = document.querySelectorAll('.video-card');
+                
+                videos.forEach(video => {
+                    if (filter === 'all' || video.getAttribute('data-category') === filter) {
+                        video.style.display = 'block';
+                        setTimeout(() => {
+                            video.style.opacity = '1';
+                            video.style.transform = 'scale(1)';
+                        }, 100);
+                    } else {
+                        video.style.opacity = '0';
+                        video.style.transform = 'scale(0.8)';
+                        setTimeout(() => {
+                            video.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            });
+        });
+
+        // Play video functionality
+        function playVideo(videoId) {
+            const modal = document.getElementById('videoModal');
+            const player = document.getElementById('videoPlayer');
+            const title = document.getElementById('modalVideoTitle');
+            const description = document.getElementById('modalVideoDescription');
+            
+            if (videoData[videoId]) {
+                player.src = videoData[videoId].url;
+                title.textContent = videoData[videoId].title;
+                description.textContent = videoData[videoId].description;
+                
+                modal.style.display = 'flex';
+                document.body.style.overflow = 'hidden';
+                
+                // Play video
+                player.play();
+            }
+        }
+
+        function playFeaturedVideo() {
+            playVideo('featured');
+        }
+
+        function closeVideoModal() {
+            const modal = document.getElementById('videoModal');
+            const player = document.getElementById('videoPlayer');
+            
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+            
+            // Pause and reset video
+            player.pause();
+            player.currentTime = 0;
+        }
+
+        // Video action functions
+        function shareVideo() {
+            if (navigator.share) {
+                navigator.share({
+                    title: document.getElementById('modalVideoTitle').textContent,
+                    text: document.getElementById('modalVideoDescription').textContent,
+                    url: window.location.href
+                });
+            } else {
+                // Fallback for browsers that don't support Web Share API
+                const url = window.location.href;
+                navigator.clipboard.writeText(url).then(() => {
+                    alert('वीडियो लिंक कॉपी कर दिया गया है!');
+                });
+            }
+        }
+
+        function downloadVideo() {
+            const videoSrc = document.getElementById('videoPlayer').src;
+            const link = document.createElement('a');
+            link.href = videoSrc;
+            link.download = 'video.mp4';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
+        function likeVideo() {
+            alert('धन्यवाद! आपकी पसंद दर्ज कर ली गई है।');
+        }
+
+        // Load more videos
+        function loadMoreVideos() {
+            const btn = document.querySelector('.load-more-videos-btn');
+            btn.innerHTML = '<span>लोड हो रहा है...</span><div class="load-icon">⌛</div>';
+            
+            setTimeout(() => {
+                btn.innerHTML = '<span>अधिक वीडियो लोड करें</span><div class="load-icon">🎬</div>';
+                // Here you can add code to actually load more videos
+            }, 2000);
+        }
+
+        // Animate on scroll
+        function animateOnScroll() {
+            const elements = document.querySelectorAll('.animate-on-scroll, .animate-fade-up');
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.classList.add('animated');
+                }
+            });
+        }
+        
+        window.addEventListener('scroll', animateOnScroll);
+        window.addEventListener('load', animateOnScroll);
+        
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Keyboard shortcuts for video modal
+        document.addEventListener('keydown', function(e) {
+            const modal = document.getElementById('videoModal');
+            if (modal.style.display === 'flex') {
+                if (e.key === 'Escape') {
+                    closeVideoModal();
+                } else if (e.key === ' ') {
+                    e.preventDefault();
+                    const player = document.getElementById('videoPlayer');
+                    if (player.paused) {
+                        player.play();
+                    } else {
+                        player.pause();
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

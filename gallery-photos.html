@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>फोटो गैलरी | लोक युवा संगठन उ.प्र.</title>
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand touch-animate" href="index.html">
+                <div class="logo-container">
+                    <img src="assets/img/logo.png" alt="लोक युवा संगठन लोगो">
+                </div>
+                <div class="brand-text">
+                    <h4 class="hindi-text">लोक युवा संगठन उ.प्र.</h4>
+                    <small>समुदायिक विकास के लिए युवा शक्ति</small>
+                </div>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link touch-animate" href="index.html">होम</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link touch-animate" href="about.html">हमारे बारे में</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link touch-animate" href="team.html">हमारी टीम</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle touch-animate" href="#" role="button" data-bs-toggle="dropdown">
+                            स्वयंसेवक
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="volunteer.html">स्वयंसेवक बनें</a></li>
+                            <li><a class="dropdown-item" href="volunteer.html#lucknow">लखनऊ</a></li>
+                            <li><a class="dropdown-item" href="volunteer.html#prayagraj">प्रयागराज</a></li>
+                            <li><a class="dropdown-item" href="volunteer.html#chitrakoot">चित्रकूट</a></li>
+                            <li><a class="dropdown-item" href="volunteer.html#shravasti">श्रावस्ती</a></li>
+                            <li><a class="dropdown-item" href="volunteer.html#aligarh">अलीगढ़</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link active dropdown-toggle touch-animate" href="#" role="button" data-bs-toggle="dropdown">
+                            गैलरी
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item active" href="gallery-photos.html">फोटो गैलरी</a></li>
+                            <li><a class="dropdown-item" href="gallery-videos.html">वीडियो गैलरी</a></li>
+                            <li><a class="dropdown-item" href="gallery-media.html">मीडिया कवरेज</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link touch-animate" href="blog.html">ब्लॉग</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link touch-animate" href="contact.html">संपर्क करें</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-primary text-white px-3 ms-2 touch-animate" href="join.html">जुड़ें</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Page Hero -->
+    <section class="gallery-hero">
+        <div class="container">
+            <div class="hero-content text-center">
+                <h1 class="hindi-text animate-fade-up">फोटो गैलरी</h1>
+                <p class="animate-fade-up">
+                    हमारे सामुदायिक कार्यक्रमों, स्वयंसेवकों की गतिविधियों और समाजिक बदलाव की कहानियों को तस्वीरों के 
+                    माध्यम से देखें। प्रत्येक तस्वीर एक सफलता की कहानी है और सकारात्मक परिवर्तन का प्रमाण है।
+                </p>
+                <div class="gallery-stats animate-fade-up">
+                    <div class="gallery-stat-item">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">तस्वीरें</span>
+                    </div>
+                    <div class="gallery-stat-item">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">कार्यक्रम</span>
+                    </div>
+                    <div class="gallery-stat-item">
+                        <span class="stat-number">5</span>
+                        <span class="stat-label">जिले</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Filters -->
+    <section class="gallery-filters-section">
+        <div class="container">
+            <div class="text-center animate-fade-up">
+                <h2 class="hindi-text" style="font-size: 2.5rem; font-weight: 800; color: #667eea;">
+                    श्रेणी के अनुसार देखें
+                </h2>
+                <p class="lead mb-4">विभिन्न कार्यक्रमों और गतिविधियों की तस्वीरें</p>
+            </div>
+            
+            <div class="filter-buttons animate-fade-up">
+                <button class="filter-btn active" data-filter="all">सभी तस्वीरें</button>
+                <button class="filter-btn" data-filter="education">शिक्षा कार्यक्रम</button>
+                <button class="filter-btn" data-filter="health">स्वास्थ्य शिविर</button>
+                <button class="filter-btn" data-filter="cleanliness">स्वच्छता अभियान</button>
+                <button class="filter-btn" data-filter="environment">पर्यावरण संरक्षण</button>
+                <button class="filter-btn" data-filter="women">महिला सशक्तिकरण</button>
+                <button class="filter-btn" data-filter="youth">युवा विकास</button>
+                <button class="filter-btn" data-filter="training">प्रशिक्षण कार्यशाला</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Gallery Grid -->
+    <section class="photo-gallery-section">
+        <div class="container-fluid px-4">
+            <div class="masonry-grid" id="photo-gallery">
+                
+                <!-- Education Photos -->
+                <div class="gallery-item animate-on-scroll" data-category="education">
+                    <div class="gallery-card">
+                        <img src="assets/img/slide-1.jpg" alt="ग्रामीण शिक्षा कार्यक्रम">
+                        <div class="gallery-watermark">लोक युवा संगठन उ.प्र.</div>
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4 class="gallery-title hindi-text">ग्रामीण शिक्षा केंद्र</h4>
+                                <p class="gallery-location">प्रयागराज, उत्तर प्रदेश</p>
+                                <p class="gallery-date">12 सितंबर 2025</p>
+                            </div>
+                            <div class="gallery-actions">
+                                <button class="gallery-btn view-btn" onclick="openLightbox('assets/img/slide-1)">
+                                    <span>👁️</span> देखें
+                                </button>
+                                <button class="gallery-btn share-btn">
+                                    <span>📤</span> शेयर
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item animate-on-scroll" data-category="health">
+                    <div class="gallery-card">
+                        <img src="assets/img/slide-2.jpg" alt="निःशुल्क स्वास्थ्य शिविर">
+                        <div class="gallery-watermark">लोक युवा संगठन उ.प्र.</div>
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4 class="gallery-title hindi-text">निःशुल्क स्वास्थ्य शिविर</h4>
+                                <p class="gallery-location">श्रावस्ती, उत्तर प्रदेश</p>
+                                <p class="gallery-date">8 सितंबर 2025</p>
+                            </div>
+                            <div class="gallery-actions">
+                                <button class="gallery-btn view-btn" onclick="openLightbox('assets/img/slide-2')">
+                                    <span>👁️</span> देखें
+                                </button>
+                                <button class="gallery-btn share-btn">
+                                    <span>📤</span> शेयर
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item animate-on-scroll" data-category="cleanliness">
+                    <div class="gallery-card">
+                        <img src="assets/img/slide-3.jpg" alt="वार्ड स्वच्छता अभियान">
+                        <div class="gallery-watermark">लोक युवा संगठन उ.प्र.</div>
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4 class="gallery-title hindi-text">वार्ड स्वच्छता अभियान</h4>
+                                <p class="gallery-location">लखनऊ, उत्तर प्रदेश</p>
+                                <p class="gallery-date">15 सितंबर 2025</p>
+                            </div>
+                            <div class="gallery-actions">
+                                <button class="gallery-btn view-btn" onclick="openLightbox('assets/img/gallery/cleanliness-1.jpg')">
+                                    <span>👁️</span> देखें
+                                </button>
+                                <button class="gallery-btn share-btn">
+                                    <span>📤</span> शेयर
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item animate-on-scroll" data-category="environment">
+                    <div class="gallery-card">
+                        <img src="assets/img/slide-4.jpg" alt="वृक्षारोपण अभियान">
+                        <div class="gallery-watermark">लोक युवा संगठन उ.प्र.</div>
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4 class="gallery-title hindi-text">वृक्षारोपण अभियान</h4>
+                                <p class="gallery-location">चित्रकूट, उत्तर प्रदेश</p>
+                                <p class="gallery-date">10 सितंबर 2025</p>
+                            </div>
+                            <div class="gallery-actions">
+                                <button class="gallery-btn view-btn" onclick="openLightbox('assets/img/gallery/environment-1.jpg')">
+                                    <span>👁️</span> देखें
+                                </button>
+                                <button class="gallery-btn share-btn">
+                                    <span>📤</span> शेयर
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item animate-on-scroll" data-category="women">
+                    <div class="gallery-card">
+                        <img src="assets/img/slide-5.jpg" alt="महिला स्वयं सहायता समूह बैठक">
+                        <div class="gallery-watermark">लोक युवा संगठन उ.प्र.</div>
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4 class="gallery-title hindi-text">महिला स्वयं सहायता समूह</h4>
+                                <p class="gallery-location">प्रयागराज, उत्तर प्रदेश</p>
+                                <p class="gallery-date">6 सितंबर 2025</p>
+                            </div>
+                            <div class="gallery-actions">
+                                <button class="gallery-btn view-btn" onclick="openLightbox('assets/img/gallery/women-1.jpg')">
+                                    <span>👁️</span> देखें
+                                </button>
+                                <button class="gallery-btn share-btn">
+                                    <span>📤</span> शेयर
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item animate-on-scroll" data-category="youth">
+                    <div class="gallery-card">
+                        <img src="assets/img/gallery/youth-1.jpg" alt="युवा नेतृत्व विकास कार्यशाला">
+                        <div class="gallery-watermark">लोक युवा संगठन उ.प्र.</div>
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4 class="gallery-title hindi-text">युवा नेतृत्व कार्यशाला</h4>
+                                <p class="gallery-location">अलीगढ़, उत्तर प्रदेश</p>
+                                <p class="gallery-date">4 सितंबर 2025</p>
+                            </div>
+                            <div class="gallery-actions">
+                                <button class="gallery-btn view-btn" onclick="openLightbox('assets/img/gallery/youth-1.jpg')">
+                                    <span>👁️</span> देखें
+                                </button>
+                                <button class="gallery-btn share-btn">
+                                    <span>📤</span> शेयर
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Add more gallery items following the same pattern -->
+                <div class="gallery-item animate-on-scroll" data-category="training">
+                    <div class="gallery-card">
+                        <img src="assets/img/gallery/training-1.jpg" alt="स्वयंसेवक प्रशिक्षण कार्यक्रम">
+                        <div class="gallery-watermark">लोक युवा संगठन उ.प्र.</div>
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4 class="gallery-title hindi-text">स्वयंसेवक प्रशिक्षण</h4>
+                                <p class="gallery-location">लखनऊ, उत्तर प्रदेश</p>
+                                <p class="gallery-date">2 सितंबर 2025</p>
+                            </div>
+                            <div class="gallery-actions">
+                                <button class="gallery-btn view-btn" onclick="openLightbox('assets/img/gallery/training-1.jpg')">
+                                    <span>👁️</span> देखें
+                                </button>
+                                <button class="gallery-btn share-btn">
+                                    <span>📤</span> शेयर
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Continue adding more photos with different categories -->
+                
+            </div>
+
+            <!-- Load More Button -->
+            <div class="text-center mt-5 animate-fade-up">
+                <button class="load-more-gallery-btn" onclick="loadMorePhotos()">
+                    <span>अधिक तस्वीरें लोड करें</span>
+                    <div class="load-icon">📷</div>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox-overlay" id="lightbox" onclick="closeLightbox()">
+        <div class="lightbox-content">
+            <button class="lightbox-close" onclick="closeLightbox()">×</button>
+            <img id="lightbox-image" src="" alt="">
+            <div class="lightbox-info">
+                <h4 id="lightbox-title"></h4>
+                <p id="lightbox-description"></p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- News Ticker -->
+    <div class="news-ticker">
+        <div class="ticker-content">
+            <span class="ticker-title">गैलरी अपडेट:</span>
+            <span class="ticker-text">
+                इस सप्ताह 50 नई तस्वीरें जोड़ी गईं • लखनऊ स्वच्छता अभियान की तस्वीरें अपलोड • 
+                प्रयागराज महिला सशक्तिकरण कार्यक्रम फोटो • चित्रकूट वृक्षारोपण अभियान गैलरी • 
+                श्रावस्ती स्वास्थ्य शिविर की तस्वीरें • अलीगढ़ युवा कार्यशाला के फोटो उपलब्ध
+            </span>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-brand">
+                        <img src="assets/img/logo.png" alt="लोक युवा संगठन" class="footer-logo">
+                        <h5 class="hindi-text">लोक युवा संगठन उ.प्र.</h5>
+                        <p class="footer-description">
+                            उत्तर प्रदेश में युवा शक्ति के माध्यम से समुदायिक विकास और सामाजिक बदलाव 
+                            लाने के लिए प्रतिबद्ध संगठन।
+                        </p>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link touch-animate">📘</a>
+                        <a href="#" class="social-link touch-animate">🐦</a>
+                        <a href="#" class="social-link touch-animate">📷</a>
+                        <a href="#" class="social-link touch-animate">💼</a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="footer-title">महत्वपूर्ण लिंक</h6>
+                    <ul class="footer-links">
+                        <li><a href="about.html" class="touch-animate">हमारे बारे में</a></li>
+                        <li><a href="team.html" class="touch-animate">हमारी टीम</a></li>
+                        <li><a href="volunteer.html" class="touch-animate">स्वयंसेवक बनें</a></li>
+                        <li><a href="blog.html" class="touch-animate">ब्लॉग</a></li>
+                        <li><a href="contact.html" class="touch-animate">संपर्क करें</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="footer-title">हमारे काम</h6>
+                    <ul class="footer-links">
+                        <li><a href="gallery-photos.html" class="touch-animate">फोटो गैलरी</a></li>
+                        <li><a href="gallery-videos.html" class="touch-animate">वीडियो गैलरी</a></li>
+                        <li><a href="gallery-media.html" class="touch-animate">मीडिया कवरेज</a></li>
+                        <li><a href="#" class="touch-animate">वार्षिक रिपोर्ट</a></li>
+                        <li><a href="#" class="touch-animate">उपलब्धियां</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-logo-section">
+                        <img src="assets/img/footer-logo.png" alt="संगठन लोगो" class="large-footer-logo touch-animate">
+                        <h4 class="footer-slogan hindi-text">
+                            "मजबूत युवा, मजबूत समुदाय"
+                        </h4>
+                        <p class="footer-tagline">
+                            सामूहिक कार्य और सतत विकास के माध्यम से कल का निर्माण
+                        </p>
+                        <div class="newsletter-signup">
+                            <input type="email" class="form-control" placeholder="ईमेल पता दर्ज करें">
+                            <button class="btn btn-primary">सब्स्क्राइब करें</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <hr class="footer-divider">
+            
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="footer-copyright">
+                        © 2025 लोक युवा संगठन उत्तर प्रदेश। सभी अधिकार सुरक्षित।
+                    </p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="footer-links-inline">
+                        <a href="#" class="touch-animate">गोपनीयता नीति</a>
+                        <a href="#" class="touch-animate">उपयोग की शर्तें</a>
+                        <a href="#" class="touch-animate">कुकी नीति</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Gallery Filter Functionality
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                // Remove active class from all buttons
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                // Add active class to clicked button
+                this.classList.add('active');
+                
+                const filter = this.getAttribute('data-filter');
+                const items = document.querySelectorAll('.gallery-item');
+                
+                items.forEach(item => {
+                    if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                        item.style.display = 'block';
+                        setTimeout(() => {
+                            item.style.opacity = '1';
+                            item.style.transform = 'scale(1)';
+                        }, 100);
+                    } else {
+                        item.style.opacity = '0';
+                        item.style.transform = 'scale(0.8)';
+                        setTimeout(() => {
+                            item.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            });
+        });
+
+        // Lightbox functionality
+        function openLightbox(imageSrc) {
+            document.getElementById('lightbox').style.display = 'flex';
+            document.getElementById('lightbox-image').src = imageSrc;
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Load more photos
+        function loadMorePhotos() {
+            const btn = document.querySelector('.load-more-gallery-btn');
+            btn.innerHTML = '<span>लोड हो रहा है...</span><div class="load-icon">⌛</div>';
+            
+            setTimeout(() => {
+                btn.innerHTML = '<span>अधिक तस्वीरें लोड करें</span><div class="load-icon">📷</div>';
+                // Here you can add code to actually load more photos
+            }, 2000);
+        }
+
+        // Animate on scroll
+        function animateOnScroll() {
+            const elements = document.querySelectorAll('.animate-on-scroll, .animate-fade-up');
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.classList.add('animated');
+                }
+            });
+        }
+        
+        window.addEventListener('scroll', animateOnScroll);
+        window.addEventListener('load', animateOnScroll);
+        
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Prevent lightbox from closing when clicking on the image
+        document.getElementById('lightbox-image').addEventListener('click', function(e) {
+            e.stopPropagation();
+        });
+    </script>
+</body>
+</html>

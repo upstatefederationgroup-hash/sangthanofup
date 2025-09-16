@@ -1,0 +1,1306 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>सदस्य ID कार्ड जनरेटर | लोक युवा संगठन उ.प्र.</title>
+    <link rel="icon" href="assets/img/favicon.png">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Noto Sans Devanagari', 'Inter', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            text-align: center;
+            color: white;
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .form-container {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+        
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #333;
+            font-size: 1rem;
+        }
+        
+        input, select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e1e5e9;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            background: white;
+        }
+        
+        input:focus, select:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+        
+        .required {
+            color: #ff4757;
+        }
+        
+        .generate-btn {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+            margin-top: 20px;
+        }
+        
+        .generate-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 35px rgba(102, 126, 234, 0.5);
+        }
+        
+        /* Centered ID Card Section with Better Spacing */
+        .id-card-section {
+            display: none;
+            text-align: center;
+            margin: 80px auto;
+            padding: 50px 30px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            min-height: 80vh;
+        }
+        
+        .section-title {
+            color: white;
+            margin-bottom: 30px;
+            font-size: 1.8rem;
+        }
+        
+        .zoom-controls {
+            margin-bottom: 40px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            display: inline-block;
+        }
+        
+        .zoom-btn {
+            padding: 10px 18px;
+            margin: 0 8px;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        
+        .zoom-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(1.05);
+        }
+        
+        .zoom-btn.active {
+            background: rgba(255, 255, 255, 0.4);
+            border-color: rgba(255, 255, 255, 0.6);
+        }
+        
+        /* ID Card Container with Better Layout */
+        .id-card-wrapper {
+            margin: 60px 0;
+            display: inline-block;
+        }
+        
+        .id-card-container {
+            display: inline-block;
+            transition: transform 0.3s ease;
+            transform-origin: center;
+            position: relative;
+            margin: 0 auto;
+        }
+        
+        /* Right Click Context Menu */
+        .context-menu {
+            position: absolute;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+            z-index: 1000;
+            display: none;
+            min-width: 180px;
+        }
+        
+        .context-menu-item {
+            padding: 12px 16px;
+            cursor: pointer;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: background 0.3s ease;
+        }
+        
+        .context-menu-item:hover {
+            background: #f5f5f5;
+        }
+        
+        /* Enhanced 3D ID Card with Better Shape */
+        .id-card {
+            width: 340px;
+            height: 214px;
+            background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%);
+            border: 2px solid #333;
+            border-radius: 15px;
+            position: relative;
+            overflow: hidden;
+            margin: 0 auto;
+            cursor: context-menu;
+            
+            /* Enhanced 3D Effects */
+            box-shadow: 
+                0 20px 40px rgba(0,0,0,0.25),
+                0 10px 25px rgba(102, 126, 234, 0.15),
+                inset 0 1px 3px rgba(255, 255, 255, 0.8),
+                inset 0 -1px 3px rgba(0, 0, 0, 0.1);
+            
+            transform: perspective(1000px) rotateX(1deg) rotateY(1deg);
+            transition: all 0.4s ease;
+        }
+        
+        .id-card:hover {
+            transform: perspective(1000px) rotateX(3deg) rotateY(2deg) translateY(-5px);
+            box-shadow: 
+                0 25px 50px rgba(0,0,0,0.3),
+                0 15px 35px rgba(102, 126, 234, 0.2),
+                inset 0 2px 5px rgba(255, 255, 255, 0.9);
+        }
+        
+        /* Decorative Corner Elements */
+        .id-card::after {
+            content: '';
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            width: 20px;
+            height: 20px;
+            background: linear-gradient(45deg, transparent 40%, #667eea 40%, #667eea 60%, transparent 60%);
+            opacity: 0.3;
+        }
+        
+        .id-card::before {
+            content: '';
+            position: absolute;
+            bottom: 8px;
+            left: 8px;
+            width: 20px;
+            height: 20px;
+            background: linear-gradient(225deg, transparent 40%, #764ba2 40%, #764ba2 60%, transparent 60%);
+            opacity: 0.3;
+        }
+        
+        /* Subtle background pattern */
+        .card-bg-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 20%, rgba(102, 126, 234, 0.03) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(118, 75, 162, 0.03) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 1;
+        }
+        
+        /* Top Header Section */
+        .card-header {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 8px 12px;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .logo {
+            width: 28px;
+            height: 28px;
+            object-fit: contain;
+            filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.2));
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 2px;
+        }
+        
+        .org-name {
+            font-size: 12px;
+            font-weight: 800;
+            color: #333;
+            text-transform: uppercase;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+        
+        .card-type {
+            font-size: 14px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+        
+        /* Main Content Area */
+        .card-content {
+            padding: 10px;
+            height: calc(100% - 50px - 25px);
+            display: flex;
+            gap: 10px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        /* Photo Section */
+        .photo-section {
+            flex-shrink: 0;
+        }
+        
+        .member-photo {
+            width: 70px;
+            height: 85px;
+            border: 2px solid #333;
+            border-radius: 8px;
+            object-fit: cover;
+            display: block;
+            box-shadow: 
+                0 4px 12px rgba(0,0,0,0.3),
+                inset 0 1px 2px rgba(255,255,255,0.5);
+        }
+        
+        /* Details Section */
+        .details-section {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .member-details {
+            flex: 1;
+        }
+        
+        .detail-row {
+            margin-bottom: 4px;
+            display: flex;
+            align-items: flex-start;
+            font-size: 10px;
+        }
+        
+        .detail-label {
+            font-weight: 700;
+            color: #333;
+            min-width: 65px;
+            text-transform: uppercase;
+            flex-shrink: 0;
+        }
+        
+        .detail-colon {
+            margin: 0 3px;
+            font-weight: 700;
+            color: #333;
+            flex-shrink: 0;
+        }
+        
+        .detail-value {
+            color: #333;
+            font-weight: 600;
+            flex: 1;
+            line-height: 1.2;
+            word-wrap: break-word;
+        }
+        
+        /* Member ID Section */
+        .id-row {
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            font-size: 10px;
+        }
+        
+        .id-label {
+            font-weight: 700;
+            color: #667eea;
+            text-transform: uppercase;
+        }
+        
+        .id-value {
+            color: #333;
+            font-weight: 700;
+            margin-left: 5px;
+        }
+        
+        /* Bottom Section */
+        .card-bottom {
+            margin-top: auto;
+            padding-top: 5px;
+            border-top: 1px solid #eee;
+        }
+        
+        .issue-date {
+            font-size: 8px;
+            color: #666;
+            text-align: right;
+        }
+        
+        .barcode-section {
+            text-align: center;
+            margin-top: 3px;
+        }
+        
+        .barcode {
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            color: #000;
+        }
+        
+        /* Slogan Section */
+        .slogan-section {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            padding: 4px 8px;
+            z-index: 2;
+        }
+        
+        .slogan-text {
+            font-size: 8px;
+            font-weight: 700;
+            color: white;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+        
+        /* Download Buttons with Better Spacing */
+        .download-container {
+            margin-top: 60px;
+            display: none;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .download-btn {
+            padding: 14px 28px;
+            border: none;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .pdf-btn {
+            background: linear-gradient(135deg, #e74c3c, #c0392b);
+            color: white;
+        }
+        
+        .jpg-btn {
+            background: linear-gradient(135deg, #2ecc71, #27ae60);
+            color: white;
+        }
+        
+        .print-btn {
+            background: linear-gradient(135deg, #9b59b6, #8e44ad);
+            color: white;
+        }
+        
+        .screenshot-btn {
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            color: white;
+        }
+        
+        .download-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+        }
+        
+        /* Success Message */
+        .success-message {
+            display: none;
+            background: linear-gradient(135deg, #2ecc71, #27ae60);
+            color: white;
+            padding: 15px 25px;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 30px;
+            font-weight: 600;
+            box-shadow: 0 8px 20px rgba(46, 204, 113, 0.3);
+        }
+        
+        /* Print Styles */
+        @media print {
+            body * {
+                visibility: hidden;
+            }
+            .id-card, .id-card * {
+                visibility: visible;
+            }
+            .id-card {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 85.60mm;
+                height: 53.98mm;
+                transform: none !important;
+                box-shadow: none !important;
+            }
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .id-card {
+                width: 300px;
+                height: 189px;
+            }
+            
+            .member-photo {
+                width: 60px;
+                height: 75px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .download-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .id-card-section {
+                padding: 30px 15px;
+                margin: 40px auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>सदस्य ID कार्ड जनरेटर</h1>
+        
+        <div class="form-container">
+            <form id="memberForm">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="name">पूरा नाम <span class="required">*</span></label>
+                        <input type="text" id="name" required placeholder="पूरा नाम दर्ज करें">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="dob">जन्म तिथि <span class="required">*</span></label>
+                        <input type="date" id="dob" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="doj">ज्वाइनिंग तिथि <span class="required">*</span></label>
+                        <input type="date" id="doj" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="address">पूरा पता <span class="required">*</span></label>
+                        <input type="text" id="address" required placeholder="पूरा पता दर्ज करें">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="district">जिला <span class="required">*</span></label>
+                        <select id="district" required>
+                            <option value="">जिला चुनें</option>
+                            <option value="lucknow">लखनऊ</option>
+                            <option value="prayagraj">प्रयागराज</option>
+                            <option value="chitrakoot">चित्रकूट</option>
+                            <option value="aligarh">अलीगढ़</option>
+                            <option value="shravasti">श्रावस्ती</option>
+                            <option value="other">अन्य</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="post">पोस्ट <span class="required">*</span></label>
+                        <input type="text" id="post" required placeholder="पोस्ट दर्ज करें">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="mobile">मोबाइल नंबर <span class="required">*</span></label>
+                        <input type="tel" id="mobile" pattern="[0-9]{10}" required placeholder="10 अंकों का मोबाइल नंबर">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="photo">फोटो (JPEG/PNG, Max 2MB) <span class="required">*</span></label>
+                        <input type="file" id="photo" accept="image/jpeg,image/png" required>
+                    </div>
+                </div>
+                
+                <button type="submit" class="generate-btn">
+                    🎯 ID कार्ड जनरेट करें
+                </button>
+            </form>
+        </div>
+        
+        <div class="id-card-section" id="idCardSection">
+            <h2 class="section-title">🎉 आपका ID कार्ड तैयार है!</h2>
+            
+            <div class="zoom-controls">
+                <button class="zoom-btn" onclick="zoomCard(0.6)" id="zoom-0-6">🔍-- Mini</button>
+                <button class="zoom-btn" onclick="zoomCard(0.8)" id="zoom-0-8">🔍- Small</button>
+                <button class="zoom-btn active" onclick="zoomCard(1)" id="zoom-1">📐 Normal</button>
+                <button class="zoom-btn" onclick="zoomCard(1.3)" id="zoom-1-3">🔍+ Large</button>
+                <button class="zoom-btn" onclick="zoomCard(1.6)" id="zoom-1-6">🔍++ Max</button>
+            </div>
+            
+            <div class="id-card-wrapper">
+                <div class="id-card-container" id="idCardContainer">
+                    <div class="id-card" id="idCard">
+                        <!-- Background Pattern -->
+                        <div class="card-bg-pattern"></div>
+                        
+                        <!-- Header -->
+                        <div class="card-header">
+                            <div class="header-left">
+                                <img src="assets/img/logo.png" alt="Logo" class="logo">
+                                <div class="org-name">लोक युवा संगठन उ.प्र.</div>
+                            </div>
+                            <div class="card-type">Member ID Card</div>
+                        </div>
+                        
+                        <!-- Main Content -->
+                        <div class="card-content">
+                            <!-- Photo Section -->
+                            <div class="photo-section">
+                                <img src="" alt="Member Photo" class="member-photo" id="memberPhoto">
+                            </div>
+                            
+                            <!-- Details Section -->
+                            <div class="details-section">
+                                <div class="member-details">
+                                    <!-- Member ID -->
+                                    <div class="id-row">
+                                        <span class="id-label">Member ID No:-</span>
+                                        <span class="id-value" id="idNumber"></span>
+                                    </div>
+                                    
+                                    <div class="detail-row">
+                                        <span class="detail-label">Name</span>
+                                        <span class="detail-colon">:</span>
+                                        <span class="detail-value" id="displayName"></span>
+                                    </div>
+                                    <div class="detail-row">
+                                        <span class="detail-label">DOB</span>
+                                        <span class="detail-colon">:</span>
+                                        <span class="detail-value" id="displayDOB"></span>
+                                    </div>
+                                    <div class="detail-row">
+                                        <span class="detail-label">DOJ</span>
+                                        <span class="detail-colon">:</span>
+                                        <span class="detail-value" id="displayDOJ"></span>
+                                    </div>
+                                    <div class="detail-row">
+                                        <span class="detail-label">Address</span>
+                                        <span class="detail-colon">:</span>
+                                        <span class="detail-value" id="displayAddress"></span>
+                                    </div>
+                                    <div class="detail-row">
+                                        <span class="detail-label">District</span>
+                                        <span class="detail-colon">:</span>
+                                        <span class="detail-value" id="displayDistrict"></span>
+                                    </div>
+                                    <div class="detail-row">
+                                        <span class="detail-label">Post</span>
+                                        <span class="detail-colon">:</span>
+                                        <span class="detail-value" id="displayPost"></span>
+                                    </div>
+                                    <div class="detail-row">
+                                        <span class="detail-label">Mobile</span>
+                                        <span class="detail-colon">:</span>
+                                        <span class="detail-value" id="displayMobile"></span>
+                                    </div>
+                                </div>
+                                
+                                <!-- Bottom Section -->
+                                <div class="card-bottom">
+                                    <div class="issue-date">Issued: <span id="issueDate"></span></div>
+                                    <div class="barcode-section">
+                                        <div class="barcode" id="barcode">||||| || ||| |||| | || |||||</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Slogan Section -->
+                        <div class="slogan-section">
+                            <div class="slogan-text">"युवा शक्ति से समाज निर्माण" - Building Society Through Youth Power</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Right Click Context Menu -->
+                    <div class="context-menu" id="contextMenu">
+                        <div class="context-menu-item" onclick="downloadPDF()">
+                            📄 Download PDF
+                        </div>
+                        <div class="context-menu-item" onclick="downloadJPG()">
+                            🖼️ Download JPG
+                        </div>
+                        <div class="context-menu-item" onclick="printIDCard()">
+                            🖨️ Print ID Card
+                        </div>
+                        <div class="context-menu-item" onclick="takeScreenshot()">
+                            📸 Take Screenshot
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="download-container" id="downloadContainer">
+                <button class="download-btn pdf-btn" id="downloadPDF">
+                    📄 Download PDF
+                </button>
+                <button class="download-btn jpg-btn" id="downloadJPG">
+                    🖼️ Download JPG
+                </button>
+                <button class="download-btn print-btn" id="printIDCard">
+                    🖨️ Print ID Card
+                </button>
+                <button class="download-btn screenshot-btn" id="takeScreenshot">
+                    📸 Take Screenshot
+                </button>
+            </div>
+            
+            <div class="success-message" id="successMessage">
+                ✅ कार्य सफलतापूर्वक पूरा हो गया!
+            </div>
+        </div>
+    </div>
+    
+    <!-- Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    
+    <script>
+        let memberData = {};
+        let currentZoom = 1;
+        
+        // District codes mapping
+        const districtCodes = {
+            'lucknow': 'LOKLKOUP',
+            'prayagraj': 'LOKPRYGUP', 
+            'chitrakoot': 'LOKCHKTUP',
+            'aligarh': 'LOKALIUP',
+            'shravasti': 'LOKSHVSTUP',
+            'other': 'LOKOTHRUP'
+        };
+        
+        // Get member numbers from localStorage
+        function getMemberNumber(district) {
+            const key = `memberCount_${district}`;
+            let count = localStorage.getItem(key) || 0;
+            count = parseInt(count) + 1;
+            localStorage.setItem(key, count);
+            return count.toString().padStart(3, '0');
+        }
+        
+        // Generate ID number
+        function generateIDNumber(district) {
+            const districtCode = districtCodes[district] || districtCodes['other'];
+            const memberNum = getMemberNumber(district);
+            return `${districtCode}-${memberNum}`;
+        }
+        
+        // Format date to Indian format
+        function formatDate(dateString) {
+            const date = new Date(dateString);
+            return date.toLocaleDateString('en-GB', {
+                day: '2-digit',
+                month: '2-digit', 
+                year: 'numeric'
+            });
+        }
+        
+        // Enhanced Zoom functionality with active states
+        function zoomCard(scale) {
+            currentZoom = scale;
+            const container = document.getElementById('idCardContainer');
+            container.style.transform = `scale(${scale})`;
+            
+            // Update active zoom button
+            document.querySelectorAll('.zoom-btn').forEach(btn => btn.classList.remove('active'));
+            document.getElementById(`zoom-${scale.toString().replace('.', '-')}`).classList.add('active');
+        }
+        
+        // Right-click context menu
+        document.getElementById('idCard').addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+            const contextMenu = document.getElementById('contextMenu');
+            contextMenu.style.display = 'block';
+            contextMenu.style.left = e.pageX + 'px';
+            contextMenu.style.top = e.pageY + 'px';
+        });
+        
+        // Hide context menu on click elsewhere
+        document.addEventListener('click', function() {
+            document.getElementById('contextMenu').style.display = 'none';
+        });
+        
+        // Form submission
+        document.getElementById('memberForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const photoFile = document.getElementById('photo').files[0];
+            if (!photoFile) {
+                alert('कृपया फोटो चुनें');
+                return;
+            }
+            
+            if (!['image/jpeg', 'image/png'].includes(photoFile.type)) {
+                alert('कृपया JPEG या PNG फोटो चुनें');
+                return;
+            }
+            
+            if (photoFile.size > 2 * 1024 * 1024) {
+                alert('फोटो का साइज़ 2MB से कम होना चाहिए');
+                return;
+            }
+            
+            // Collect form data
+            memberData = {
+                name: document.getElementById('name').value.trim(),
+                dob: document.getElementById('dob').value,
+                doj: document.getElementById('doj').value,
+                address: document.getElementById('address').value.trim(),
+                district: document.getElementById('district').value,
+                post: document.getElementById('post').value.trim(),
+                mobile: document.getElementById('mobile').value.trim()
+            };
+            
+            // Generate ID
+            memberData.id = generateIDNumber(memberData.district);
+            
+            // Read photo and display card
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                memberData.photoURL = e.target.result;
+                displayIDCard();
+            };
+            reader.readAsDataURL(photoFile);
+        });
+        
+        // Display ID Card
+        function displayIDCard() {
+            // Update card display
+            document.getElementById('idNumber').textContent = memberData.id;
+            document.getElementById('memberPhoto').src = memberData.photoURL;
+            document.getElementById('displayName').textContent = memberData.name;
+            document.getElementById('displayDOB').textContent = formatDate(memberData.dob);
+            document.getElementById('displayDOJ').textContent = formatDate(memberData.doj);
+            document.getElementById('displayAddress').textContent = memberData.address;
+            document.getElementById('displayDistrict').textContent = getDistrictName(memberData.district);
+            document.getElementById('displayPost').textContent = memberData.post;
+            document.getElementById('displayMobile').textContent = memberData.mobile;
+            document.getElementById('issueDate').textContent = formatDate(new Date().toISOString().split('T')[0]);
+            
+            // Show card section
+            document.getElementById('idCardSection').style.display = 'block';
+            document.getElementById('downloadContainer').style.display = 'flex';
+            
+            // Scroll to card with better positioning
+            setTimeout(() => {
+                document.getElementById('idCardSection').scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }, 100);
+        }
+        
+        // Get district display name
+        function getDistrictName(districtValue) {
+            const names = {
+                'lucknow': 'लखनऊ',
+                'prayagraj': 'प्रयागराज',
+                'chitrakoot': 'चित्रकूट', 
+                'aligarh': 'अलीगढ़',
+                'shravasti': 'श्रावस्ती',
+                'other': 'अन्य'
+            };
+            return names[districtValue] || districtValue;
+        }
+        
+        // Complete PDF Download
+        function downloadPDF() {
+            const { jsPDF } = window.jspdf;
+            
+            const pdf = new jsPDF({
+                orientation: 'landscape',
+                unit: 'mm',
+                format: [85.60, 53.98]
+            });
+            
+            // Background
+            pdf.setFillColor(248, 249, 250);
+            pdf.rect(0, 0, 85.60, 53.98, 'F');
+            
+            // Border
+            pdf.setDrawColor(51, 51, 51);
+            pdf.setLineWidth(0.5);
+            pdf.rect(1, 1, 83.60, 51.98);
+            
+            // Header
+            pdf.setFillColor(248, 249, 250);
+            pdf.rect(1, 1, 83.60, 10, 'F');
+            pdf.line(1, 11, 84.60, 11);
+            
+            // Logo
+            const logoImg = document.querySelector('.logo');
+            if (logoImg && logoImg.complete && logoImg.src) {
+                try {
+                    pdf.addImage(logoImg.src, 'PNG', 3, 2.5, 7, 7);
+                } catch (e) {
+                    console.log('Logo loading issue');
+                }
+            }
+            
+            // Organization name
+            pdf.setFont('helvetica', 'bold');
+            pdf.setFontSize(8);
+            pdf.setTextColor(51, 51, 51);
+            pdf.text('लोक युवा संगठन उ.प्र.', 12, 7);
+            
+            // Card type
+            pdf.setFont('helvetica', 'bold');
+            pdf.setFontSize(9);
+            pdf.setTextColor(102, 126, 234);
+            pdf.text('MEMBER ID CARD', 60, 7);
+            
+            // Photo
+            if (memberData.photoURL) {
+                try {
+                    pdf.setDrawColor(51, 51, 51);
+                    pdf.setLineWidth(0.5);
+                    pdf.rect(3, 13, 17, 21);
+                    pdf.addImage(memberData.photoURL, 'JPEG', 3.5, 13.5, 16, 20);
+                } catch (e) {
+                    console.log('Photo loading issue');
+                }
+            }
+            
+            // Details
+            pdf.setFont('helvetica', 'bold');
+            pdf.setFontSize(6.5);
+            pdf.setTextColor(51, 51, 51);
+            
+            let y = 15;
+            const lineHeight = 2.5;
+            
+            // Member ID
+            pdf.setTextColor(102, 126, 234);
+            pdf.text('MEMBER ID NO:-', 22, y);
+            pdf.setFont('helvetica', 'bold');
+            pdf.setTextColor(51, 51, 51);
+            pdf.text(memberData.id, 40, y);
+            y += lineHeight;
+            
+            // All details
+            const details = [
+                ['NAME', memberData.name],
+                ['DOB', formatDate(memberData.dob)],
+                ['DOJ', formatDate(memberData.doj)],
+                ['ADDRESS', memberData.address],
+                ['DISTRICT', getDistrictName(memberData.district)],
+                ['POST', memberData.post],
+                ['MOBILE', memberData.mobile]
+            ];
+            
+            details.forEach(([label, value]) => {
+                pdf.setFont('helvetica', 'bold');
+                pdf.setTextColor(51, 51, 51);
+                pdf.text(`${label}:`, 22, y);
+                pdf.setFont('helvetica', 'normal');
+                pdf.text(value, 35, y, { maxWidth: 47 });
+                y += lineHeight;
+            });
+            
+            // Issue date
+            pdf.setFont('helvetica', 'normal');
+            pdf.setFontSize(5);
+            pdf.text(`Issued: ${formatDate(new Date().toISOString().split('T')[0])}`, 70, 35);
+            
+            // Barcode
+            pdf.setFont('courier', 'bold');
+            pdf.setFontSize(8);
+            pdf.text('||||| || ||| |||| | || |||||', 42.8, 38, { align: 'center' });
+            
+            // Slogan
+            pdf.setFillColor(102, 126, 234);
+            pdf.rect(1, 42, 83.60, 10.98, 'F');
+            pdf.setFont('helvetica', 'bold');
+            pdf.setFontSize(5.5);
+            pdf.setTextColor(255, 255, 255);
+            pdf.text('"युवा शक्ति से समाज निर्माण" - Building Society Through Youth Power', 42.8, 48, { align: 'center' });
+            
+            pdf.save(`${memberData.id}_ID_Card.pdf`);
+            showSuccess();
+        }
+        
+        // JPG Download
+        function downloadJPG() {
+            html2canvas(document.getElementById('idCard'), {
+                scale: 4,
+                useCORS: true,
+                allowTaint: false,
+                backgroundColor: '#ffffff',
+                width: 340,
+                height: 214,
+                logging: false,
+                imageTimeout: 0
+            }).then(canvas => {
+                const link = document.createElement('a');
+                link.download = `${memberData.id}_ID_Card.jpg`;
+                link.href = canvas.toDataURL('image/jpeg', 0.95);
+                link.click();
+                showSuccess();
+            }).catch(err => {
+                console.error('JPG Download Error:', err);
+                alert('JPG डाउनलोड में त्रुटि हुई। कृपया Screenshot विकल्प का उपयोग करें।');
+            });
+        }
+        
+        // Print ID Card Function - Direct Print of ID Card Only
+        function printIDCard() {
+            // Create a new window for printing
+            const printWindow = window.open('', '_blank');
+            const idCard = document.getElementById('idCard');
+            
+            printWindow.document.write(`
+                <!DOCTYPE html>
+                <html>
+                <head>
+                    <title>ID Card Print - ${memberData.id}</title>
+                    <style>
+                        @page {
+                            size: 85.60mm 53.98mm;
+                            margin: 0;
+                        }
+                        
+                        body {
+                            margin: 0;
+                            padding: 0;
+                            font-family: Arial, sans-serif;
+                        }
+                        
+                        .print-container {
+                            width: 85.60mm;
+                            height: 53.98mm;
+                            position: relative;
+                            overflow: hidden;
+                        }
+                        
+                        .id-card {
+                            width: 100%;
+                            height: 100%;
+                            background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%);
+                            border: 2px solid #333;
+                            border-radius: 15px;
+                            position: relative;
+                            overflow: hidden;
+                        }
+                        
+                        .card-header {
+                            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+                            padding: 2mm;
+                            border-bottom: 1px solid #ddd;
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                        }
+                        
+                        .header-left {
+                            display: flex;
+                            align-items: center;
+                            gap: 2mm;
+                        }
+                        
+                        .logo {
+                            width: 7mm;
+                            height: 7mm;
+                        }
+                        
+                        .org-name {
+                            font-size: 3mm;
+                            font-weight: 800;
+                            text-transform: uppercase;
+                        }
+                        
+                        .card-type {
+                            font-size: 3.5mm;
+                            font-weight: 800;
+                            color: #667eea;
+                            text-transform: uppercase;
+                        }
+                        
+                        .card-content {
+                            padding: 2.5mm;
+                            display: flex;
+                            gap: 2.5mm;
+                            height: calc(100% - 12mm - 6mm);
+                        }
+                        
+                        .member-photo {
+                            width: 17mm;
+                            height: 21mm;
+                            border: 0.5mm solid #333;
+                            border-radius: 2mm;
+                            object-fit: cover;
+                        }
+                        
+                        .details-section {
+                            flex: 1;
+                            display: flex;
+                            flex-direction: column;
+                        }
+                        
+                        .member-details {
+                            flex: 1;
+                        }
+                        
+                        .detail-row, .id-row {
+                            margin-bottom: 1mm;
+                            font-size: 2.5mm;
+                            display: flex;
+                            align-items: flex-start;
+                        }
+                        
+                        .detail-label, .id-label {
+                            font-weight: 700;
+                            min-width: 16mm;
+                            text-transform: uppercase;
+                        }
+                        
+                        .id-label {
+                            color: #667eea;
+                        }
+                        
+                        .detail-value, .id-value {
+                            font-weight: 600;
+                            flex: 1;
+                            line-height: 1.2;
+                        }
+                        
+                        .id-value {
+                            font-weight: 700;
+                        }
+                        
+                        .card-bottom {
+                            margin-top: auto;
+                            padding-top: 1mm;
+                            border-top: 0.3mm solid #eee;
+                        }
+                        
+                        .issue-date {
+                            font-size: 2mm;
+                            color: #666;
+                            text-align: right;
+                        }
+                        
+                        .barcode {
+                            font-family: 'Courier New', monospace;
+                            font-size: 3mm;
+                            font-weight: bold;
+                            text-align: center;
+                        }
+                        
+                        .slogan-section {
+                            position: absolute;
+                            bottom: 0;
+                            left: 0;
+                            right: 0;
+                            background: linear-gradient(135deg, #667eea, #764ba2);
+                            padding: 1mm 2mm;
+                        }
+                        
+                        .slogan-text {
+                            font-size: 2mm;
+                            font-weight: 700;
+                            color: white;
+                            text-align: center;
+                            text-transform: uppercase;
+                        }
+                    </style>
+                </head>
+                <body>
+                    <div class="print-container">
+                        <div class="id-card">
+                            <div class="card-header">
+                                <div class="header-left">
+                                    <img src="${document.querySelector('.logo').src}" alt="Logo" class="logo">
+                                    <div class="org-name">लोक युवा संगठन उ.प्र.</div>
+                                </div>
+                                <div class="card-type">Member ID Card</div>
+                            </div>
+                            <div class="card-content">
+                                <img src="${memberData.photoURL}" alt="Member Photo" class="member-photo">
+                                <div class="details-section">
+                                    <div class="member-details">
+                                        <div class="id-row">
+                                            <span class="id-label">Member ID No:-</span>
+                                            <span class="id-value">${memberData.id}</span>
+                                        </div>
+                                        <div class="detail-row">
+                                            <span class="detail-label">Name:</span>
+                                            <span class="detail-value">${memberData.name}</span>
+                                        </div>
+                                        <div class="detail-row">
+                                            <span class="detail-label">DOB:</span>
+                                            <span class="detail-value">${formatDate(memberData.dob)}</span>
+                                        </div>
+                                        <div class="detail-row">
+                                            <span class="detail-label">DOJ:</span>
+                                            <span class="detail-value">${formatDate(memberData.doj)}</span>
+                                        </div>
+                                        <div class="detail-row">
+                                            <span class="detail-label">Address:</span>
+                                            <span class="detail-value">${memberData.address}</span>
+                                        </div>
+                                        <div class="detail-row">
+                                            <span class="detail-label">District:</span>
+                                            <span class="detail-value">${getDistrictName(memberData.district)}</span>
+                                        </div>
+                                        <div class="detail-row">
+                                            <span class="detail-label">Post:</span>
+                                            <span class="detail-value">${memberData.post}</span>
+                                        </div>
+                                        <div class="detail-row">
+                                            <span class="detail-label">Mobile:</span>
+                                            <span class="detail-value">${memberData.mobile}</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-bottom">
+                                        <div class="issue-date">Issued: ${formatDate(new Date().toISOString().split('T')[0])}</div>
+                                        <div class="barcode">||||| || ||| |||| | || |||||</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slogan-section">
+                                <div class="slogan-text">"युवा शक्ति से समाज निर्माण" - Building Society Through Youth Power</div>
+                            </div>
+                        </div>
+                    </div>
+                </body>
+                </html>
+            `);
+            
+            printWindow.document.close();
+            
+            // Wait for content to load then print
+            setTimeout(() => {
+                printWindow.print();
+                printWindow.close();
+                showSuccess();
+            }, 500);
+        }
+        
+        // Take Screenshot
+        function takeScreenshot() {
+            alert('🔍 ID कार्ड को अपने पसंदीदा ज़ूम लेवल पर सेट करें और अपने डिवाइस के स्क्रीनशॉट टूल का उपयोग करके स्क्रीनशॉट लें!\n\n💡 Tip: Max Zoom पर सबसे बेहतर quality मिलेगी।');
+        }
+        
+        // Button event listeners
+        document.getElementById('downloadPDF').addEventListener('click', downloadPDF);
+        document.getElementById('downloadJPG').addEventListener('click', downloadJPG);
+        document.getElementById('printIDCard').addEventListener('click', printIDCard);
+        document.getElementById('takeScreenshot').addEventListener('click', takeScreenshot);
+        
+        // Show success message
+        function showSuccess() {
+            const successMsg = document.getElementById('successMessage');
+            successMsg.style.display = 'block';
+            setTimeout(() => {
+                successMsg.style.display = 'none';
+            }, 3000);
+        }
+        
+        // Auto-set today's date for DOJ
+        document.getElementById('doj').valueAsDate = new Date();
+    </script>
+</body>
+</html>

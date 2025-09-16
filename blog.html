@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ब्लॉग | लोक युवा संगठन उ.प्र.</title>
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand touch-animate" href="index.html">
+                <div class="logo-container">
+                    <img src="assets/img/logo.png" alt="लोक युवा संगठन लोगो">
+                </div>
+                <div class="brand-text">
+                    <h4 class="hindi-text">लोक युवा संगठन उ.प्र.</h4>
+                    <small>समुदायिक विकास के लिए युवा शक्ति</small>
+                </div>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link touch-animate" href="index.html">होम</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link touch-animate" href="about.html">हमारे बारे में</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link touch-animate" href="team.html">हमारी टीम</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle touch-animate" href="#" role="button" data-bs-toggle="dropdown">
+                            स्वयंसेवक
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="volunteer.html">स्वयंसेवक बनें</a></li>
+                            <li><a class="dropdown-item" href="volunteer.html#lucknow">लखनऊ</a></li>
+                            <li><a class="dropdown-item" href="volunteer.html#prayagraj">प्रयागराज</a></li>
+                            <li><a class="dropdown-item" href="volunteer.html#chitrakoot">चित्रकूट</a></li>
+                            <li><a class="dropdown-item" href="volunteer.html#shravasti">श्रावस्ती</a></li>
+                            <li><a class="dropdown-item" href="volunteer.html#aligarh">अलीगढ़</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle touch-animate" href="#" role="button" data-bs-toggle="dropdown">
+                            गैलरी
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="gallery-photos.html">फोटो गैलरी</a></li>
+                            <li><a class="dropdown-item" href="gallery-videos.html">वीडियो गैलरी</a></li>
+                            <li><a class="dropdown-item" href="gallery-media.html">मीडिया कवरेज</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active touch-animate" href="blog.html">ब्लॉग</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link touch-animate" href="contact.html">संपर्क करें</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-primary text-white px-3 ms-2 touch-animate" href="join.html">जुड़ें</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Page Hero -->
+    <section class="blog-hero">
+        <div class="container">
+            <div class="hero-content text-center">
+                <h1 class="hindi-text animate-fade-up">हमारा ब्लॉग</h1>
+                <p class="animate-fade-up">
+                    समुदायिक विकास, सामाजिक बदलाव और युवा सशक्तिकरण की कहानियां। यहाँ पढ़ें हमारे अनुभव, 
+                    सीखे गए सबक और समुदाय के साथ हमारी यात्रा के महत्वपूर्ण मोड़ों के बारे में।
+                </p>
+                <div class="blog-hero-stats animate-fade-up">
+                    <div class="blog-stat-item">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">लेख प्रकाशित</span>
+                    </div>
+                    <div class="blog-stat-item">
+                        <span class="stat-number">15K+</span>
+                        <span class="stat-label">पाठक</span>
+                    </div>
+                    <div class="blog-stat-item">
+                        <span class="stat-number">5</span>
+                        <span class="stat-label">विषय श्रेणियां</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Blog Post -->
+    <section class="featured-post-section">
+        <div class="container">
+            <div class="featured-post animate-fade-up">
+                <div class="row g-0 align-items-center">
+                    <div class="col-lg-6">
+                        <div class="featured-image">
+                            <img src="assets/img/blog/featured-post.jpg" alt="मुख्य लेख">
+                            <div class="image-watermark">लोक युवा संगठन उ.प्र.</div>
+                            <div class="featured-badge">मुख्य लेख</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="featured-content">
+                            <div class="post-meta">
+                                <span class="post-category">समुदायिक विकास</span>
+                                <span class="post-date">12 सितंबर 2025</span>
+                            </div>
+                            <h2 class="featured-title hindi-text">
+                                ग्रामीण शिक्षा में डिजिटल क्रांति: चुनौतियां और समाधान
+                            </h2>
+                            <p class="featured-excerpt">
+                                उत्तर प्रदेश के दूरदराज के गांवों में डिजिटल शिक्षा को लेकर हमारे तीन वर्षों के अनुभव और 
+                                सीखे गए महत्वपूर्ण सबक। कैसे हमने तकनीकी बाधाओं को पार कर 500+ बच्चों तक गुणवत्तापूर्ण 
+                                शिक्षा पहुंचाई और स्थानीय शिक्षकों को डिजिटल साक्षर बनाया।
+                            </p>
+                            <div class="featured-author">
+                                <img src="assets/img/team/team-5.jpg" alt="विकास गुप्ता" class="author-avatar">
+                                <div class="author-info">
+                                    <strong class="author-name hindi-text">विकास गुप्ता</strong>
+                                    <span class="author-role">तकनीकी सलाहकार</span>
+                                </div>
+                            </div>
+                            <a href="blog-post-1.html" class="read-more-btn">पूरा लेख पढ़ें</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Categories -->
+    <section class="blog-categories-section">
+        <div class="container">
+            <div class="text-center mb-5 animate-fade-up">
+                <h2 class="hindi-text" style="font-size: 2.5rem; font-weight: 800; color: #667eea;">
+                    विषय श्रेणियां
+                </h2>
+                <p class="lead">विभिन्न विषयों पर हमारे लेख और अनुभव</p>
+            </div>
+            
+            <div class="categories-grid animate-fade-up">
+                <div class="category-card touch-animate">
+                    <div class="category-icon">🏫</div>
+                    <h4 class="category-title hindi-text">शिक्षा और साक्षरता</h4>
+                    <p class="category-description">ग्रामीण शिक्षा, डिजिटल साक्षरता और शैक्षिक नवाचार पर लेख</p>
+                    <div class="category-count">12 लेख</div>
+                </div>
+                
+                <div class="category-card touch-animate">
+                    <div class="category-icon">🏥</div>
+                    <h4 class="category-title hindi-text">स्वास्थ्य और कल्याण</h4>
+                    <p class="category-description">सामुदायिक स्वास्थ्य, जागरूकता अभियान और स्वास्थ्य शिविर</p>
+                    <div class="category-count">8 लेख</div>
+                </div>
+                
+                <div class="category-card touch-animate">
+                    <div class="category-icon">🌱</div>
+                    <h4 class="category-title hindi-text">पर्यावरण संरक्षण</h4>
+                    <p class="category-description">जल संरक्षण, वृक्षारोपण और पर्यावरण जागरूकता कार्यक्रम</p>
+                    <div class="category-count">10 लेख</div>
+                </div>
+                
+                <div class="category-card touch-animate">
+                    <div class="category-icon">👩‍💼</div>
+                    <h4 class="category-title hindi-text">महिला सशक्तिकरण</h4>
+                    <p class="category-description">महिला नेतृत्व, स्वयं सहायता समूह और आर्थिक स्वावलंबन</p>
+                    <div class="category-count">15 लेख</div>
+                </div>
+                
+                <div class="category-card touch-animate">
+                    <div class="category-icon">👨‍💻</div>
+                    <h4 class="category-title hindi-text">युवा नेतृत्व</h4>
+                    <p class="category-description">युवा विकास, कौशल प्रशिक्षण और नेतृत्व क्षमता निर्माण</p>
+                    <div class="category-count">9 लेख</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recent Blog Posts -->
+    <section class="recent-posts-section">
+        <div class="container">
+            <div class="text-center mb-5 animate-fade-up">
+                <h2 class="hindi-text" style="font-size: 2.5rem; font-weight: 800; color: #667eea;">
+                    हाल के लेख
+                </h2>
+                <p class="lead">हमारी नवीनतम कहानियां और अनुभव</p>
+            </div>
+            
+            <div class="blog-posts-grid animate-fade-up">
+                <!-- Blog Post 1 -->
+                <article class="blog-post-card touch-animate">
+                    <div class="post-image-wrapper">
+                        <img src="assets/img/blog/post-1.jpg" alt="महिला स्वयं सहायता समूह">
+                        <div class="image-watermark">लोक युवा संगठन उ.प्र.</div>
+                        <div class="post-category-badge">महिला सशक्तिकरण</div>
+                    </div>
+                    <div class="post-content">
+                        <div class="post-meta">
+                            <span class="post-date">10 सितंबर 2025</span>
+                            <span class="read-time">5 मिनट पढ़ें</span>
+                        </div>
+                        <h3 class="post-title hindi-text">
+                            <a href="blog-post-2.html">प्रयागराज में महिला स्वयं सहायता समूहों की सफलता की कहानी</a>
+                        </h3>
+                        <p class="post-excerpt">
+                            कैसे गांव की 25 महिलाओं ने मिलकर एक सफल उद्यम खड़ा किया और आत्मनिर्भरता की नई 
+                            मिसाल कायम की। उनकी संघर्ष और सफलता की प्रेरणादायक कहानी...
+                        </p>
+                        <div class="post-footer">
+                            <div class="author-mini">
+                                <img src="assets/img/team/team-2.jpg" alt="प्रिया सिंह" class="author-mini-avatar">
+                                <span class="author-mini-name">प्रिया सिंह</span>
+                            </div>
+                            <a href="blog-post-2.html" class="read-more-link">पढ़ें →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Blog Post 2 -->
+                <article class="blog-post-card touch-animate">
+                    <div class="post-image-wrapper">
+                        <img src="assets/img/blog/post-2.jpg" alt="जल संरक्षण परियोजना">
+                        <div class="image-watermark">लोक युवा संगठन उ.प्र.</div>
+                        <div class="post-category-badge">पर्यावरण</div>
+                    </div>
+                    <div class="post-content">
+                        <div class="post-meta">
+                            <span class="post-date">8 सितंबर 2025</span>
+                            <span class="read-time">7 मिनट पढ़ें</span>
+                        </div>
+                        <h3 class="post-title hindi-text">
+                            <a href="blog-post-3.html">चित्रकूट के गांवों में जल संरक्षण की नई तकनीक</a>
+                        </h3>
+                        <p class="post-excerpt">
+                            पारंपरिक ज्ञान और आधुनिक तकनीक के संयोजन से कैसे हमने भूजल स्तर बढ़ाया और 
+                            5 गांवों में पानी की समस्या का स्थायी समाधान निकाला...
+                        </p>
+                        <div class="post-footer">
+                            <div class="author-mini">
+                                <img src="assets/img/team/team-9.jpg" alt="राज कुमार" class="author-mini-avatar">
+                                <span class="author-mini-name">राज कुमार</span>
+                            </div>
+                            <a href="blog-post-3.html" class="read-more-link">पढ़ें →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Blog Post 3 -->
+                <article class="blog-post-card touch-animate">
+                    <div class="post-image-wrapper">
+                        <img src="assets/img/blog/post-3.jpg" alt="स्वच्छता अभियान">
+                        <div class="image-watermark">लोक युवा संगठन उ.प्र.</div>
+                        <div class="post-category-badge">स्वच्छता</div>
+                    </div>
+                    <div class="post-content">
+                        <div class="post-meta">
+                            <span class="post-date">6 सितंबर 2025</span>
+                            <span class="read-time">4 मिनट पढ़ें</span>
+                        </div>
+                        <h3 class="post-title hindi-text">
+                            <a href="blog-post-4.html">लखनऊ के वार्डों में स्वच्छता क्रांति</a>
+                        </h3>
+                        <p class="post-excerpt">
+                            50+ स्वयंसेवकों के साथ मिलकर हमने कैसे 15 वार्डों में कचरा पृथक्करण और 
+                            साप्ताहिक सफाई रोस्टर स्थापित किया। परिणाम चौंकाने वाले हैं...
+                        </p>
+                        <div class="post-footer">
+                            <div class="author-mini">
+                                <img src="assets/img/team/team-1.jpg" alt="राहुल शर्मा" class="author-mini-avatar">
+                                <span class="author-mini-name">राहुल शर्मा</span>
+                            </div>
+                            <a href="blog-post-4.html" class="read-more-link">पढ़ें →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Blog Post 4 -->
+                <article class="blog-post-card touch-animate">
+                    <div class="post-image-wrapper">
+                        <img src="assets/img/blog/post-4.jpg" alt="युवा नेतृत्व कार्यशाला">
+                        <div class="image-watermark">लोक युवा संगठन उ.प्र.</div>
+                        <div class="post-category-badge">युवा विकास</div>
+                    </div>
+                    <div class="post-content">
+                        <div class="post-meta">
+                            <span class="post-date">4 सितंबर 2025</span>
+                            <span class="read-time">6 मिनट पढ़ें</span>
+                        </div>
+                        <h3 class="post-title hindi-text">
+                            <a href="blog-post-5.html">श्रावस्ती में युवा नेतृत्व विकास कार्यशाला के नतीजे</a>
+                        </h3>
+                        <p class="post-excerpt">
+                            तीन दिवसीय गहन प्रशिक्षण के बाद 30 युवाओं ने कैसे अपने गांवों में बदलाव की 
+                            शुरुआत की। उनकी व्यक्तिगत कहानियां और सफलता के किस्से...
+                        </p>
+                        <div class="post-footer">
+                            <div class="author-mini">
+                                <img src="assets/img/team/team-8.jpg" alt="मोहिनी शुक्ला" class="author-mini-avatar">
+                                <span class="author-mini-name">मोहिनी शुक्ला</span>
+                            </div>
+                            <a href="blog-post-5.html" class="read-more-link">पढ़ें →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Blog Post 5 -->
+                <article class="blog-post-card touch-animate">
+                    <div class="post-image-wrapper">
+                        <img src="assets/img/blog/post-5.jpg" alt="स्वास्थ्य शिविर">
+                        <div class="image-watermark">लोक युवा संगठन उ.प्र.</div>
+                        <div class="post-category-badge">स्वास्थ्य</div>
+                    </div>
+                    <div class="post-content">
+                        <div class="post-meta">
+                            <span class="post-date">2 सितंबर 2025</span>
+                            <span class="read-time">5 मिनट पढ़ें</span>
+                        </div>
+                        <h3 class="post-title hindi-text">
+                            <a href="blog-post-6.html">अलीगढ़ में निःशुल्क स्वास्थ्य शिविर का प्रभाव</a>
+                        </h3>
+                        <p class="post-excerpt">
+                            200+ ग्रामीणों की निःशुल्क जांच और दवा वितरण के साथ-साथ स्वास्थ्य जागरूकता 
+                            कार्यक्रम का व्यापक प्रभाव। डॉक्टरों और स्वयंसेवकों के अनुभव...
+                        </p>
+                        <div class="post-footer">
+                            <div class="author-mini">
+                                <img src="assets/img/team/team-6.jpg" alt="अनिता यादव" class="author-mini-avatar">
+                                <span class="author-mini-name">अनिता यादव</span>
+                            </div>
+                            <a href="blog-post-6.html" class="read-more-link">पढ़ें →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Blog Post 6 -->
+                <article class="blog-post-card touch-animate">
+                    <div class="post-image-wrapper">
+                        <img src="assets/img/blog/post-6.jpg" alt="डॉक्यूमेंट्री प्रोजेक्ट">
+                        <div class="image-watermark">लोक युवा संगठन उ.प्र.</div>
+                        <div class="post-category-badge">मीडिया</div>
+                    </div>
+                    <div class="post-content">
+                        <div class="post-meta">
+                            <span class="post-date">30 अगस्त 2025</span>
+                            <span class="read-time">8 मिनट पढ़ें</span>
+                        </div>
+                        <h3 class="post-title hindi-text">
+                            <a href="blog-post-7.html">समुदायिक कहानियों को डॉक्यूमेंट्री के माध्यम से सजीव करना</a>
+                        </h3>
+                        <p class="post-excerpt">
+                            कैसे हमारे मीडिया टीम ने स्थानीय कहानियों को वीडियो के माध्यम से राष्ट्रीय 
+                            मंच तक पहुंचाया और सामाजिक मुद्दों पर जागरूकता बढ़ाई...
+                        </p>
+                        <div class="post-footer">
+                            <div class="author-mini">
+                                <img src="assets/img/team/team-7.jpg" alt="संदीप त्रिपाठी" class="author-mini-avatar">
+                                <span class="author-mini-name">संदीप त्रिपाठी</span>
+                            </div>
+                            <a href="blog-post-7.html" class="read-more-link">पढ़ें →</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Load More Button -->
+            <div class="text-center mt-5 animate-fade-up">
+                <button class="load-more-btn">
+                    <span>अधिक लेख लोड करें</span>
+                    <div class="load-icon">↓</div>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Subscription -->
+    <section class="blog-newsletter-section">
+        <div class="container">
+            <div class="newsletter-card animate-fade-up">
+                <div class="row align-items-center">
+                    <div class="col-lg-8">
+                        <h3 class="newsletter-title hindi-text">हमारे ब्लॉग अपडेट पाएं</h3>
+                        <p class="newsletter-description">
+                            नए लेख, सामुदायिक कहानियां और महत्वपूर्ण अपडेट सीधे अपने ईमेल में पाने के लिए सब्स्क्राइब करें
+                        </p>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="newsletter-form">
+                            <div class="input-group">
+                                <input type="email" class="form-control" placeholder="आपका ईमेल पता">
+                                <button class="btn btn-primary" type="button">सब्स्क्राइब करें</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- News Ticker -->
+    <div class="news-ticker">
+        <div class="ticker-content">
+            <span class="ticker-title">ब्लॉग अपडेट:</span>
+            <span class="ticker-text">
+                इस सप्ताह 5 नए लेख प्रकाशित • महिला सशक्तिकरण पर विशेष श्रृंखला शुरू • 
+                पर्यावरण संरक्षण के सफल मॉडल पर केस स्टडी • युवा नेतृत्व कार्यशाला की रिपोर्ट • 
+                डिजिटल साक्षरता कार्यक्रम के परिणाम • स्वास्थ्य शिविरों का व्यापक प्रभाव रिपोर्ट
+            </span>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-brand">
+                        <img src="assets/img/logo.png" alt="लोक युवा संगठन" class="footer-logo">
+                        <h5 class="hindi-text">लोक युवा संगठन उ.प्र.</h5>
+                        <p class="footer-description">
+                            उत्तर प्रदेश में युवा शक्ति के माध्यम से समुदायिक विकास और सामाजिक बदलाव 
+                            लाने के लिए प्रतिबद्ध संगठन।
+                        </p>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link touch-animate">📘</a>
+                        <a href="#" class="social-link touch-animate">🐦</a>
+                        <a href="#" class="social-link touch-animate">📷</a>
+                        <a href="#" class="social-link touch-animate">💼</a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="footer-title">महत्वपूर्ण लिंक</h6>
+                    <ul class="footer-links">
+                        <li><a href="about.html" class="touch-animate">हमारे बारे में</a></li>
+                        <li><a href="team.html" class="touch-animate">हमारी टीम</a></li>
+                        <li><a href="volunteer.html" class="touch-animate">स्वयंसेवक बनें</a></li>
+                        <li><a href="blog.html" class="touch-animate">ब्लॉग</a></li>
+                        <li><a href="contact.html" class="touch-animate">संपर्क करें</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="footer-title">हमारे काम</h6>
+                    <ul class="footer-links">
+                        <li><a href="gallery-photos.html" class="touch-animate">फोटो गैलरी</a></li>
+                        <li><a href="gallery-videos.html" class="touch-animate">वीडियो गैलरी</a></li>
+                        <li><a href="gallery-media.html" class="touch-animate">मीडिया कवरेज</a></li>
+                        <li><a href="#" class="touch-animate">वार्षिक रिपोर्ट</a></li>
+                        <li><a href="#" class="touch-animate">उपलब्धियां</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-logo-section">
+                        <img src="assets/img/footer-logo.png" alt="संगठन लोगो" class="large-footer-logo touch-animate">
+                        <h4 class="footer-slogan hindi-text">
+                            "मजबूत युवा, मजबूत समुदाय"
+                        </h4>
+                        <p class="footer-tagline">
+                            सामूहिक कार्य और सतत विकास के माध्यम से कल का निर्माण
+                        </p>
+                        <div class="newsletter-signup">
+                            <input type="email" class="form-control" placeholder="ईमेल पता दर्ज करें">
+                            <button class="btn btn-primary">सब्स्क्राइब करें</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <hr class="footer-divider">
+            
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="footer-copyright">
+                        © 2025 लोक युवा संगठन उत्तर प्रदेश। सभी अधिकार सुरक्षित।
+                    </p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="footer-links-inline">
+                        <a href="#" class="touch-animate">गोपनीयता नीति</a>
+                        <a href="#" class="touch-animate">उपयोग की शर्तें</a>
+                        <a href="#" class="touch-animate">कुकी नीति</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Animate on scroll
+        function animateOnScroll() {
+            const elements = document.querySelectorAll('.animate-fade-up');
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.classList.add('animated');
+                }
+            });
+        }
+        
+        window.addEventListener('scroll', animateOnScroll);
+        window.addEventListener('load', animateOnScroll);
+        
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Load More Posts
+        document.querySelector('.load-more-btn').addEventListener('click', function() {
+            this.innerHTML = '<span>लोड हो रहा है...</span><div class="load-icon">⌛</div>';
+            
+            setTimeout(() => {
+                this.innerHTML = '<span>अधिक लेख लोड करें</span><div class="load-icon">↓</div>';
+            }, 2000);
+        });
+    </script>
+</body>
+</html>
