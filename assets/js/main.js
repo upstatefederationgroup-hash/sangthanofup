@@ -379,3 +379,5 @@ function initParallax() {
 
 // Initialize parallax
 initParallax();
+
+

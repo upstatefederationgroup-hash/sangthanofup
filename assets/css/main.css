@@ -352,6 +352,116 @@ body {
     transform: scale(1.02);
 }
 
+
+/* upcoming Events in index*/
+    /* =============== SATISFACTION SECTION - NEW COLORS =============== */
+
+.satisfaction-section {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #1e293b 0%, #334155 50%, #475569 100%);
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.satisfaction-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 30% 20%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 70% 80%, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+/* Section Title Visibility Fix */
+
+
+/* Testimonials with New Color Scheme */
+.testimonials-section {
+    position: relative;
+    z-index: 2;
+}
+
+.testimonial-card {
+    background: rgba(59, 130, 246, 0.15);
+    border-radius: 20px;
+    padding: 30px;
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.testimonial-card:hover {
+    background: rgba(59, 130, 246, 0.25);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(59, 130, 246, 0.2);
+}
+
+.testimonial-content {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.quote-icon {
+    font-size: 4rem;
+    color: rgba(96, 165, 250, 0.3);
+    line-height: 1;
+    margin-bottom: 15px;
+}
+
+.testimonial-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.author-info h5 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: #60a5fa;
+}
+
+.author-location {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    color: rgba(255,255,255,0.8);
+}
+
+/* Animation for counting numbers */
+@keyframes countUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.stat-number.animate {
+    animation: countUp 0.6s ease-out;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .upcoming-events-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 25px;
+    }
+    
+    .satisfaction-stats {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 30px;
+    }
+}
+
 /* News Ticker */
 .news-ticker {
     background: linear-gradient(90deg, #667eea, #764ba2);
